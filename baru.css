@@ -10,17 +10,17 @@
 }
 
 :root{
-    --red:red;
+    --red: rgb(228, 71, 56);
     --black: white;
     --light-color: grey;
-    --box-shadow:.5rem .5rem 0 rgba(184, 41, 74, 0.2);
-    --text-shadow:.4rem .4rem 0 rgba(137, 37, 102, 0.2);
+    --box-shadow:.5rem .5rem 0 rgba(253, 90, 128, 0.292);
+    --text-shadow:.4rem .4rem 0 rgba(184, 43, 72, 0.3);
     --border:.2rem solid var(--red);
 }
 
 html{
     font-size: 62.5%;
-    
+
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
@@ -35,34 +35,108 @@ section:nth-child(even){
 }
 
 .kepala{
-    padding:2rem 9%;
+    background-color: var(--black);
     position: fixed;
-    top:0; left: 0; right: 0;
-    z-index: 1000;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     display: flex;
+    left: -300px;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    /* padding:2rem 9%;
+    position: fixed; */
+     /* height: 100%;
+    top:0; left: 0; right: 0;
+    z-index: 5; */
+    z-index: 1000;
+    box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    background: #fff;
+    background: #fff;  */
+}
+
+
+.kepala.active{
+    background-color: var(--black);
+    position: fixed;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    /* padding:2rem 9%;
+    position: fixed; */
+     /* height: 100%;
+    top:0; left: 0; right: 0;
+    z-index: 5; */
+    z-index: 1000;
+    box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;  */
 }
 
 .kepala .logo{
-    font-size: 2.5rem;
-    color: var(--light-color);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--black);
+    z-index: 2000;
+    align-items: center;
+    background-color: var(--red);
 }
-
 .kepala .logo i{
-    color: var(--red);
+    width: 50px;
 }
 
-.kepala .navbar a{
-    font-size: 1.7rem;
+.kepala .navbar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 2rem;
     color: var(--light-color);
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
-.kepala .navbar a:hover{
+.kepala .navbar div{
+    padding: 30px;
+    display: flex;
+    /* margin-left: 50px; */
+}
+
+.kepala .navbar i{
+    width: 50px;
+}
+
+.kepala a{
     color: var(--red);
+    font-weight: bold;
+}
+
+.kepala a:hover{
+    opacity: 0.4;
+}
+
+.kepala .user{
+    font-size: 2rem;
+    padding: 30px;
+    display: flex;
+}
+
+.kepala .user i{
+    width: 50px;
+}
+
+.kepala .muka{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .home{
@@ -96,7 +170,7 @@ section:nth-child(even){
     font-size: 1.7rem;
     color:var(--light-color);
     line-height: 1.8;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 
 .btn{
@@ -130,4 +204,13 @@ section:nth-child(even){
     color: var(--red);
     background:#fff;
     margin-left: 1rem;
+}
+
+#menu-btn{
+    color: var(--red);
+    cursor: pointer;
+    position: fixed;
+    font-size: 3rem;
+    top: 35px;
+    left: 50px;
 }
