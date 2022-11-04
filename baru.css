@@ -214,3 +214,25 @@ section:nth-child(even){
     top: 35px;
     left: 50px;
 }
+
+
+#login_form{
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    background-color: rgb(228, 71, 56);
+    color: white;
+}
+
+.tbtext{
+    text-align: right;
+    font-size: x-large;
+}
+
+.tbinput{
+    text-align: left;
+    font-size: x-large;
+    padding-left: 10px;
+    border-color: black;
+    border: 200px;
+}
