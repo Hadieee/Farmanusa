@@ -1,3 +1,7 @@
+<?php
+    require "navbar.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,29 +15,6 @@
 </head>
 
 <body>
-    <div class="tempat">
-        <nav class="kepala">
-            <a href="" class="logo"><i class="fas fa-heart"></i><span>Farmanusa</span></a>
-            <div class="muka">
-                <div class="navbar">
-                    <div>
-                        <a href="baru.php"><i class="fas fa-home"></i><span>Home</span></a>
-                    </div>
-                    <div>
-                        <a href=""><i class="fa-solid fa-pills"></i><span>Obat<span></a>
-                    </div>
-                    <div>
-                        <a href=""><i class="fas fa-user-md"></i><span>Apoteker</span></a>
-                    </div>
-                </div>
-                <div class="user">
-                    <a href="login-page.php"><i class="fas fa-user"></i><span>Login</span></a>
-                </div>
-            </div>
-        </nav>
-        <div><i id="menu-btn" class="fas fa-bars"></i></div>
-    </div>
-
     <div>
     <section class="home">
         <table id='login_form' border=1>
