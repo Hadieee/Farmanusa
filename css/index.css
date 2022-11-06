@@ -12,6 +12,7 @@
     text-decoration: none;
 }
 
+
 html[data-theme='light'] {
     --red: #e44738;
     --black: white;

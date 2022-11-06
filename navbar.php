@@ -15,7 +15,7 @@
             </div>
             <div class="user">
 
-                <a onclick="document.getElementById('popop').style.display = 'block';"><i class="fas fa-user"></i><span>Login</span></a>
+                <a onclick="document.getElementById('popup').style.display = 'block';"><i class="fas fa-user"></i><span>Login</span></a>
             </div>
         </div>
         <div><i id="menu-btn" class="fas fa-bars"></i></div>
