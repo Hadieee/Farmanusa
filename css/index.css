@@ -12,7 +12,7 @@
     text-decoration: none;
 }
 
-:root {
+html[data-theme='light'] {
     --red: #e44738;
     --black: white;
     --light-color: grey;
@@ -21,9 +21,17 @@
     --border: .2rem solid var(--red);
 }
 
+html[data-theme='dark'] {
+    --red: #46b671;
+    --black: white;
+    --light-color: grey;
+    --box-shadow: .5rem .5rem 0 rgba(98, 206, 116, 0.292);
+    --text-shadow: .4rem .4rem 0 rgba(43, 144, 75, 0.3);
+    --border: .2rem solid var(--red);
+}
+
 html {
     font-size: 62.5%;
-
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;

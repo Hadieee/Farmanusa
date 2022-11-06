@@ -1,7 +1,3 @@
-<?php
-    include 'navbar.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,19 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome To Farmanusa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="baru.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    
+    <?php
+        include 'navbar.php';
+    ?>
     <div class='badan'>
         <div class="home" id="home">
             <div class="image">
-                <object type="image/svg+xml" data="image/book-img.svg">
-                    <img src="image/book-img.svg" />
-                </object>
+                <div class="dark" style="display: none;">
+                    <object type="image/svg+xml" data="image/about-img.svg">
+                        <img src="image/about-img.svg" />
+                    </object>
+                </div>
+                <div class="light">
+                    <object type="image/svg+xml" data="image/book-img.svg">
+                        <img src="image/book-img.svg" />
+                    </object>
+                </div>
             </div>
-    
             <div class="content">
                 <h3>stay safe, stay healthy</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed autem vero? Magnam, est laboriosam!</p>
