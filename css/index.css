@@ -13,7 +13,7 @@
 }
 
 :root {
-    --red: rgb(228, 71, 56);
+    --red: #e44738;
     --black: white;
     --light-color: grey;
     --box-shadow: .5rem .5rem 0 rgba(253, 90, 128, 0.292);
@@ -170,7 +170,7 @@ section:nth-child(even) {
     padding: 4rem 4rem 0rem 4rem;
 }
 
-.home .image img {
+.home .image object {
     width: 100%;
 }
 
