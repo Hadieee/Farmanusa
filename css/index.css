@@ -17,7 +17,7 @@ html[data-theme='light'] {
     --red: #e44738;
     --white: white;
     --light-color: grey;
-    --dark-color: #01c3f3;
+    --dark-color: #ff0000;
     --box-shadow: .5rem .5rem 0 rgba(253, 90, 128, 0.292);
     --text-shadow: .4rem .4rem 0 rgba(184, 43, 72, 0.3);
     --border: .2rem solid var(--red);
@@ -26,8 +26,8 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
     --red: #46b671;
     --white: #041C32;
-    --light-color: grey;
-    --dark-color: rgb(74, 2, 113);
+    --light-color: rgb(128, 128, 128);
+    --dark-color: rgb(107, 255, 184);
     --box-shadow: .5rem .5rem 0 rgba(98, 206, 116, 0.292);
     --text-shadow: .4rem .4rem 0 rgba(43, 144, 75, 0.3);
     --border: .2rem solid var(--red);
@@ -42,7 +42,6 @@ html {
 
 body {
 	background-color: var(--white);
-	height: 100vh;
 	margin: 0;
 	transition: background 0.2s linear;
 }
@@ -60,7 +59,6 @@ section {
     width: auto;
     height: 100%;
     z-index: 0;
-    box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08);
 }
 
 .popup .login {
@@ -83,6 +81,10 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.tempat{
+    display: flex;
+}
+
 .kepala.active {
     background-color: var(--white);
     position: fixed;
@@ -92,7 +94,8 @@ section {
     width: auto;
     height: 100%;
     z-index: 0;
-    box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08);
+    /* box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08); */
+    box-shadow: 0.5px 0 0.5rem var(--dark-color);
 }
 
 .kepala .logo {
@@ -160,7 +163,8 @@ section {
 }
 
 .badan{
-    height: 100vh;
+    margin-top: 75px;
+    height: auto;
     display: flex;
     justify-content: space-around;
 }
@@ -174,7 +178,7 @@ section {
 
 .home .image {
     flex: 1 1 45rem;
-    padding: 4rem 4rem 0rem 4rem;
+    /* padding: 4rem 4rem 0rem 4rem; */
 }
 
 .home .image object {
@@ -183,7 +187,7 @@ section {
 
 .home .content {
     flex: 1 1 45rem;
-    padding: 0rem 3rem 4rem 3rem;
+    /* padding: 0rem 3rem 4rem 3rem; */
 }
 
 .home .content h3 {
@@ -248,6 +252,13 @@ section {
 }
 
 #menu-btn {
+    box-shadow: var(--text-shadow);
+    text-align: center;
+    width: 5rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--red);
+    background-color: var(--white);
     color: var(--red);
     cursor: pointer;
     position: fixed;
@@ -255,6 +266,10 @@ section {
     top: 35px;
     left: 50px;
     z-index: 100;
+}
+
+.about{
+    margin-bottom: 75px;
 }
 
 .about .row{
@@ -270,6 +285,7 @@ section {
 
 .about .row .image img{
     width: 100%;
+    box-shadow: var(--box-shadow);
     border-radius: 8px;
 }
 
@@ -303,6 +319,7 @@ section {
 }
 
 .label {
+    box-shadow: var(--text-shadow);
     background-color: var(--red);
     border-radius: 50px;
     cursor: pointer;
@@ -343,4 +360,10 @@ section {
     .kepala.active .dark_mode {
         display: none;
     }   
+}
+
+@media only screen and (max-width: 300px) {
+    .badan{
+        margin-bottom: 50%;
+    } 
 }
