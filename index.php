@@ -15,29 +15,21 @@
 </head>
 
 <body>
-
-    <div class="dark_mode">
-        <input type="checkbox" class="checkbox" id="toggle" />
-        <label class="label" for="toggle">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-        </label>
-    </div>
-
-    <div>
-        <section class="home" id="home">
+    
+    <div class='badan'>
+        <div class="home" id="home">
             <div class="image">
                 <img src="image/book-img.svg" alt="">
             </div>
-
+    
             <div class="content">
                 <h3>stay safe, stay healthy</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed autem vero? Magnam, est laboriosam!</p>
                 <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
             </div>
-        </section>
+        </div>
     </div>
+
     <div class="popup" id="popup">
         <form class="login">
             <table align="center">

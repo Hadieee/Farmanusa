@@ -31,8 +31,16 @@
                     <a onclick="document.getElementById('popop').style.display = 'block';"><i class="fas fa-user"></i><span>Login</span></a>
                 </div>
             </div>
+            <div><i id="menu-btn" class="fas fa-bars"></i></div>
+            <div class="dark_mode">
+                <input type="checkbox" class="checkbox" id="toggle" />
+                <label class="label" for="toggle">
+                    <!-- <i class="fas fa-moon"></i> -->
+                    <!-- <i class="fas fa-sun"></i> -->
+                    <div class="ball"></div>
+                </label>
+            </div>
         </nav>
-        <div><i id="menu-btn" class="fas fa-bars"></i></div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
