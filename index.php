@@ -19,7 +19,9 @@
     <div class='badan'>
         <div class="home" id="home">
             <div class="image">
-                <img src="image/book-img.svg" alt="">
+                <object type="image/svg+xml" data="image/book-img.svg">
+                    <img src="image/book-img.svg" />
+                </object>
             </div>
     
             <div class="content">
