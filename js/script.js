@@ -52,9 +52,3 @@ toggle.onclick = function(){
     document.documentElement.setAttribute('data-theme', targetTheme);
     localStorage.setItem('theme', targetTheme);
 }
-
-
-// window.onscroll = () =>{
-//     menu.classList.remove('fa-times');
-//     navbar.classList.remove('active');
-// }
