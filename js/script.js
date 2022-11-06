@@ -22,15 +22,6 @@ let img_dark = document.querySelector('.dark');
 let img_light = document.querySelector('.light');
 
 var currentTheme = document.documentElement.getAttribute('data-theme');
-
-if(currentTheme === "light"){
-    img_light.style.display = "block";
-    img_dark.style.display = "none";
-}else{
-    img_light.style.display = "none";
-    img_dark.style.display = "block";
-}
-
 let toggle = document.querySelector('#toggle');
 
 if(currentTheme === "light") {
