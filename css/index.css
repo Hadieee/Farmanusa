@@ -24,7 +24,7 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
     --red: #46b671;
-    --black: white;
+    --black: black;
     --light-color: grey;
     --box-shadow: .5rem .5rem 0 rgba(98, 206, 116, 0.292);
     --text-shadow: .4rem .4rem 0 rgba(43, 144, 75, 0.3);
@@ -39,7 +39,7 @@ html {
 }
 
 body {
-	background-color: #fafafa;
+	background-color: var(--black);
 	height: 100vh;
 	margin: 0;
 	transition: background 0.2s linear;
@@ -47,10 +47,6 @@ body {
 
 section {
     padding: 2rem 9%;
-}
-
-section:nth-child(even) {
-    background: #f5f5f5;
 }
 
 .kepala {
@@ -212,25 +208,25 @@ section:nth-child(even) {
     color: var(--red);
     cursor: pointer;
     font-size: 1.7rem;
-    background: #fff;
+    background: var(--black);
 }
 
 .btn span {
     padding: .7rem 1rem;
     border-radius: .5rem;
     background: var(--red);
-    color: #fff;
+    color: var(--black);
     margin-left: .5rem;
 }
 
 .btn:hover {
     background: var(--red);
-    color: #fff;
+    color: var(--black);
 }
 
 .btn:hover span {
     color: var(--red);
-    background: #fff;
+    background: var(--black);
     margin-left: 1rem;
 }
 
@@ -242,12 +238,6 @@ section:nth-child(even) {
     top: 35px;
     left: 50px;
     z-index: 100;
-}
-
-/* Dark-Mode */
-
-body.dark {
-	background: #292C35;
 }
 
 .dark_mode {
@@ -274,7 +264,7 @@ body.dark {
 }
 
 .label .ball {
-    background-color: #fff;
+    background-color: var(--black);
     border-radius: 50%;
     position: absolute;
     left: 4px;
