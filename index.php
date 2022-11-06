@@ -14,7 +14,7 @@
     <?php
     include 'navbar.php';
     ?>
-    <div class='badan'>
+    <section class='badan'>
         <div class="home" id="home">
             <div class="image">
                 <div class="dark" style="display: none;">
@@ -34,7 +34,7 @@
                 <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
             </div>
         </div>
-    </div>
+</section>
 
     <!-- about section starts  -->
 
