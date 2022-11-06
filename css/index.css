@@ -16,7 +16,7 @@
 html[data-theme='light'] {
     --red: #e44738;
     --white: white;
-    --light-color: grey;
+    --light-color: black;
     --dark-color: #01c3f3;
     --box-shadow: .5rem .5rem 0 rgba(253, 90, 128, 0.292);
     --text-shadow: .4rem .4rem 0 rgba(184, 43, 72, 0.3);
@@ -26,7 +26,7 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
     --red: #46b671;
     --white: #041C32;
-    --light-color: grey;
+    --light-color: #fff;
     --dark-color: rgb(74, 2, 113);
     --box-shadow: .5rem .5rem 0 rgba(98, 206, 116, 0.292);
     --text-shadow: .4rem .4rem 0 rgba(43, 144, 75, 0.3);
