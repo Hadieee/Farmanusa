@@ -270,6 +270,7 @@ section {
 
 .about .row .image img{
     width: 100%;
+    border-radius: 8px;
 }
 
 .about .row .content{
