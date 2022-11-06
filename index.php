@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+    <!-- home section starts  -->
+
     <?php
     include 'navbar.php';
     ?>
@@ -34,7 +37,9 @@
                 <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
             </div>
         </div>
-</section>
+    </section>
+
+    <!-- home section ends  -->
 
     <!-- about section starts  -->
 
@@ -61,6 +66,8 @@
 
     <!-- about section ends -->
 
+    <!-- pop up login starts  -->
+
     <div class="popup" id="popup">
         <form class="login">
             <table align="center">
@@ -79,6 +86,9 @@
         </form>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- pop up login ends  -->
+
 </body>
 
 </html>
