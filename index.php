@@ -128,10 +128,10 @@
             </table>
         </form>
     </div>
-    <script type="text/javascript" src="js/script.js"></script>
-
+    
     <!-- pop up login ends  -->
-
+    
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

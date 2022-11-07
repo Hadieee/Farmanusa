@@ -12,6 +12,9 @@
                 <div>
                     <a href=""><i class="fas fa-user-md"></i><span>Apoteker</span></a>
                 </div>
+                <div>
+                    <a href=""><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
+                </div>
             </div>
             <div class="user">
 
