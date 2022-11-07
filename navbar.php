@@ -4,10 +4,10 @@
         <div class="muka">
             <div class="navbar">
                 <div>
-                    <a href=""><i class="fas fa-home"></i><span>Home</span></a>
+                    <a href="index.php"><i class="fas fa-home"></i><span>Home</span></a>
                 </div>
                 <div>
-                    <a href=""><i class="fa-solid fa-pills"></i><span>Obat<span></a>
+                    <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Obat<span></a>
                 </div>
                 <div>
                     <a href=""><i class="fas fa-user-md"></i><span>Apoteker</span></a>

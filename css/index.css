@@ -16,6 +16,7 @@
 html[data-theme='light'] {
     --red: #e44738;
     --white: white;
+    --pink: pink;
     --light-color: grey;
     --dark-color: #ff0000;
     --box-shadow: .5rem .5rem 0 rgba(253, 90, 128, 0.292);
@@ -26,6 +27,7 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
     --red: #46b671;
     --white: #041C32;
+    --pink: purple;
     --light-color: rgb(128, 128, 128);
     --dark-color: rgb(107, 255, 184);
     --box-shadow: .5rem .5rem 0 rgba(98, 206, 116, 0.292);
@@ -356,7 +358,7 @@ section {
 
 .products .box-container .box .content .price span{
     font-size: 1.5rem;
-    color:#999;
+    color:var(--pink);
     font-weight: lighter;
     text-decoration: line-through;
 }
