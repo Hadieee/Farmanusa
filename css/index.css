@@ -335,6 +335,8 @@ section {
 }
 
 .products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid var(--red);
+    border-right: .1rem solid var(--box-shadow);
     width:100%;
 }
 
@@ -500,4 +502,5 @@ section {
     .kepala.active .dark_mode {
         display: none;
     }   
+>>>>>>> 810e508f0cf4dbe4c6df3bb49d147de12be683d9
 }
