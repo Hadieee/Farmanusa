@@ -501,6 +501,5 @@ section {
 @media only screen and (max-width: 420px) {
     .kepala.active .dark_mode {
         display: none;
-    }   
->>>>>>> 810e508f0cf4dbe4c6df3bb49d147de12be683d9
+    }
 }
