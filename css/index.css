@@ -27,7 +27,7 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
     --red: #46b671;
     --white: #041C32;
-    --pink: purple;
+    --pink: rgb(40, 205, 128);
     --light-color: rgb(128, 128, 128);
     --dark-color: rgb(107, 255, 184);
     --box-shadow: .5rem .5rem 0 rgba(98, 206, 116, 0.292);
@@ -60,7 +60,7 @@ section {
     flex-direction: column;
     width: auto;
     height: 100%;
-    z-index: 0;
+    z-index: 2;
 }
 
 .popup .login {
@@ -85,6 +85,7 @@ section {
 
 .tempat{
     display: flex;
+    z-index: 2000;
 }
 
 .kepala.active {
@@ -95,7 +96,6 @@ section {
     flex-direction: column;
     width: auto;
     height: 100%;
-    z-index: 0;
     /* box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08); */
     box-shadow: 0.5px 0 0.5rem var(--dark-color);
 }
@@ -123,6 +123,7 @@ section {
     width: 100%;
     font-size: 2rem;
     color: var(--light-color);
+    background-color: var(--white);
 }
 
 .kepala .navbar div {
@@ -272,15 +273,18 @@ section {
 
 .products .box-container{
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap:1.5rem;
 }
 
 .products .box-container .box{
+    max-width: 300px;
     flex:1 1 30rem;
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    /* box-shadow: 0 .1rem .8rem var(--light-color); */
+    box-shadow: var(--box-shadow);
     border-radius: .5rem;
-    border:.1rem solid rgba(0,0,0,.1);
+    border:.05rem solid var(--pink);
     position: relative;    
 }
 
@@ -289,8 +293,9 @@ section {
     top:1rem; left:1rem;
     padding:.7rem 1rem;
     font-size: 2rem;
-    color:var(--red);
-    background:var(--light-color);
+    color:var(--white);
+    background:var(--red);
+    box-shadow: var(--box-shadow);
     z-index: 1;
     border-radius: .5rem;
 }
@@ -326,7 +331,7 @@ section {
     font-size: 2rem;
     width:50%;
     background:var(--pink);
-    color:#fff;
+    color: var(--white);
 }
 
 .products .box-container .box .image .icons .cart-btn{
