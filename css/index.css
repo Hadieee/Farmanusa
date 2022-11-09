@@ -16,8 +16,9 @@
 html[data-theme='light'] {
     --red: #e44738;
     --white: white;
-    --pink: rgb(255, 82, 82);
-    --light-color: rgb(128, 128, 128);
+    --pink: pink;
+    --purple: purple;
+    --light-color: #041c32;
     --dark-color: #ff0000;
     --box-shadow: .5rem .5rem 0 rgba(253, 90, 128, 0.292);
     --text-shadow: .4rem .4rem 0 rgba(184, 43, 72, 0.3);
@@ -28,6 +29,7 @@ html[data-theme='dark'] {
     --red: #46b671;
     --white: #041C32;
     --pink: rgb(40, 205, 128);
+    --purple: rgb(206, 138, 206);
     --light-color: rgb(128, 128, 128);
     --dark-color: rgb(107, 255, 184);
     --box-shadow: .5rem .5rem 0 rgba(98, 206, 116, 0.292);
@@ -63,6 +65,32 @@ section {
     z-index: 2;
 }
 
+/* ----------------------   LOGIN PLACE    ------------------------*/
+.popup .login center{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.popup td{
+    padding-top: 5px;
+    color: var(--light-color);
+}
+
+.popup .login table input{
+    font-size: x-large;
+    border: 1px solid var(--dark-color);
+}
+
+.popup .login table{
+    width: 80%;
+    font-size: x-large;
+    background-color: var(--white);
+    padding: 50px;
+    border: 1px solid var(--dark-color);
+    border-radius: 5%;
+}
+
 .popup .login {
     display: flex;
     margin: auto;
@@ -82,6 +110,75 @@ section {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+.inLoginButton :link, .inLoginButton :visited{
+    color: black;
+    padding: 5px;
+    font-size: medium;
+    border-radius: 10%;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    border: 2px solid var(--dark-color);
+}
+
+.inLoginButton :hover{
+    background-color: rgb(176, 176, 176);
+    color: #041C32;
+}
+
+#regist_btn{
+    font-size: medium;
+    padding-top: 10px;
+}
+
+#regist_btn a{
+    font-weight: bold;
+    color: var(--purple);
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    .popup td{
+        padding-top: 5px;
+        color: var(--light-color);
+    }
+    
+    .popup .login table input{
+        font-size: small;
+        border: 1px solid var(--dark-color);
+    }
+    
+    .popup .login table{
+        width: 80%;
+        font-size: small;
+        background-color: var(--white);
+        padding: 30px;
+        border: 1px solid var(--dark-color);
+        border-radius: 5%;
+    }
+    
+    .inLoginButton :link, .inLoginButton :visited{
+        color: black;
+        padding: 3px;
+        font-size: smaller;
+        border-radius: 10%;
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        border: 1px solid var(--dark-color);
+    }
+    
+    .inLoginButton :hover{
+        background-color: rgb(176, 176, 176);
+        color: #041C32;
+    }
+
+    #regist_btn{
+        font-size: smaller;
+        padding-top: 10px;
+    }
+  }
+/* ----------------------  ///    ------------------------*/
 
 .tempat{
     display: flex;
@@ -166,7 +263,7 @@ section {
 }
 
 .badan{
-    margin: 75px 0px;
+    margin-top: 75px;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -208,7 +305,6 @@ section {
 
 .heading{
     text-align: center;
-    padding-top: 75px;
     padding-bottom: 2rem;
     text-shadow: var(--text-shadow);
     text-transform: uppercase;
@@ -272,17 +368,6 @@ section {
     z-index: 100;
 }
 
-.kosong{
-    display: flex;
-    color: var(--red);
-    height: 60vh;
-    text-align: center;
-    flex-direction: column;
-    font-size: 30px;
-    justify-content: center;
-    margin-bottom: 20vh;
-}
-
 .obat .box-container{
     display: flex;
     justify-content: space-around;
@@ -314,16 +399,13 @@ section {
 .obat .box-container .box .image{
     position: relative;
     text-align: center;
-    padding: 2rem 2rem 0 2rem;
-    overflow: hidden;
-    height: 25rem; 
+    padding-top: 2rem;
+    overflow:hidden;
 }
 
 .obat .box-container .box .image img{
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    height:25rem;
+    width: 25rem;
 }
 
 .obat .box-container .box:hover .image img{
@@ -450,6 +532,10 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap:2rem;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
 }
 
 .about .row .image img{

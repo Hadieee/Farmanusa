@@ -38,7 +38,7 @@
             ?>
                 <div class="box">
                     <img src="image/blog-2.jpg" alt="">
-                    <h1><?php echo staff['username'] ?></h1>
+                    <h1><?php echo $staff['username'] ?></h1>
                     <span>expert fharmachist</span>
                     <div class="share">
                         <a href="#" class="fab fa-facebook-f"></a>

@@ -4,7 +4,8 @@ function current_url()
     $url      = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     $validURL = str_replace("&", "&amp;", $url);
     $legitURL = explode('/', $validURL);
-    return end($legitURL);
+    $legitURL = explode('.', end($legitURL));
+    return $legitURL[0];
 }
 //echo "page URL is : ".current_url();
 
@@ -18,25 +19,25 @@ $offer_url = current_url();
         <div class="muka">
             <div class="navbar">
                 <?php 
-                if ($offer_url != 'index.php'){
+                if ($offer_url != 'index'){
                 echo'
                     <div>
                         <a href="index.php"><i class="fas fa-home"></i><span> Home </span></a>
                     </div>';
                 }
 
-                if($offer_url != 'obat.php'){
+                if($offer_url != 'obat'){
                 echo'
                     <div>
                         <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Obat<span></a>
                     </div>';
                 }
 
-                if($offer_url != 'apoteker.php'){
-                    echo'
-                    <div>
-                        <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Apoteker</span></a>
-                    </div>';
+                if($offer_url != 'apoteker'){
+                echo'
+                <div>
+                    <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Apoteker</span></a>
+                </div>';
                 }
                 ?>
                 
@@ -46,7 +47,7 @@ $offer_url = current_url();
             </div>
             <div class="user">
 
-                <a onclick="document.getElementById('popup').style.display = 'block';"><i class="fas fa-user"></i><span>Login</span></a>
+                <a onclick="document.getElementById('popup').style.display = 'flex';"><i class="fas fa-user"></i><span>Login</span></a>
             </div>
         </div>
         <div><i id="menu-btn" class="fas fa-bars"></i></div>

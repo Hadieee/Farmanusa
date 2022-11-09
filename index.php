@@ -34,11 +34,11 @@
                 </div>
             </div>
             <div class="content">
-                <h3>Your Wellness Is Our Priority.</h3>
+                <h3>Your Wellness Is Our Priority</h3>
                 <p>
                     Selamat datang di Farmanusa,
-                    dimana Wellness anda adalah
-                    jantung kehidupan kami</p>
+                    di mana kesehatan Anda adalah
+                    jantung kehidupan Kami.</p>
                 <a href="#about" class="btn"> Tentang Kami <span class="fas fa-chevron-right"></span> </a>
             </div>
         </div>
@@ -119,23 +119,7 @@
 
     <!-- pop up login starts  -->
 
-    <div class="popup" id="popup">
-        <form class="login">
-            <table align="center">
-                <tr>
-                    <td align="center">Username: </td>
-                    <td align="center"><input type="text" size="20" maxlength="15" name="username"></td>
-                </tr>
-                <tr>
-                    <td align="center">Password: </td>
-                    <td align="center"><input size=\"20\" type="password" size="20" maxlength="15" name="password"></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center"><input type="submit" value="Login"> </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+    <?php require 'login.php';?>
 
     <!-- pop up login ends  -->
 
