@@ -47,7 +47,11 @@ $offer_url = current_url();
             </div>
             <div class="user">
 
-                <a onclick="document.getElementById('popup').style.display = 'flex';"><i class="fas fa-user"></i><span>Login</span></a>
+                <a onclick="document.getElementById('popup').style.display = 'flex';
+                            document.querySelector('.kepala').classList.toggle('active');
+                            document.querySelector('#menu-btn').style.left = '50px';
+                            document.querySelector('#menu-btn').classList.toggle('fa-times');">
+                <i class="fas fa-user"></i><span>Login</span></a>
             </div>
         </div>
         <div><i id="menu-btn" class="fas fa-bars"></i></div>
