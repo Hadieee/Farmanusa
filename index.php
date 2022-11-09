@@ -75,7 +75,7 @@
 
     <!-- footer section starts  -->
 
-    <section class="footer">
+    <!-- <section class="footer">
 
         <div class="box-container">
 
@@ -111,7 +111,9 @@
 
         <div class="credit"> created by <span>Farmanusa's Team Website Development</span> | all rights NOT reserved </div>
 
-    </section>
+    </section> -->
+
+    <?php include 'footer.php' ?>
 
     <!-- footer section ends  -->
 

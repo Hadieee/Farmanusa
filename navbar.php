@@ -32,10 +32,14 @@ $offer_url = current_url();
                     </div>';
                 }
 
+                if($offer_url != 'apoteker.php'){
+                    echo'
+                    <div>
+                        <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Apoteker</span></a>
+                    </div>';
+                }
                 ?>
-                <div>
-                    <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Apoteker</span></a>
-                </div>
+                
                 <div>
                     <a href=""><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
                 </div>
