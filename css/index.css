@@ -271,14 +271,14 @@ section {
     z-index: 100;
 }
 
-.products .box-container{
+.obat .box-container{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap:1.5rem;
 }
 
-.products .box-container .box{
+.obat .box-container .box{
     max-width: 300px;
     flex:1 1 30rem;
     box-shadow: var(--box-shadow);
@@ -287,7 +287,7 @@ section {
     position: relative;    
 }
 
-.products .box-container .box .discount{
+.obat .box-container .box .discount{
     position: absolute;
     top:1rem; left:1rem;
     padding:.7rem 1rem;
@@ -299,33 +299,33 @@ section {
     border-radius: .5rem;
 }
 
-.products .box-container .box .image{
+.obat .box-container .box .image{
     position: relative;
     text-align: center;
     padding-top: 2rem;
     overflow:hidden;
 }
 
-.products .box-container .box .image img{
+.obat .box-container .box .image img{
     height:25rem;
     width: 25rem;
 }
 
-.products .box-container .box:hover .image img{
+.obat .box-container .box:hover .image img{
     transform: scale(1.1);
 }
 
-.products .box-container .box .image .icons{
+.obat .box-container .box .image .icons{
     position: absolute;
     bottom:-7rem; left:0; right:0;
     display: flex;
 }
 
-.products .box-container .box:hover .image .icons{
+.obat .box-container .box:hover .image .icons{
     bottom:0;
 }
 
-.products .box-container .box .image .icons a{
+.obat .box-container .box .image .icons a{
     height: 5rem;
     line-height: 5rem;
     font-size: 2rem;
@@ -334,34 +334,34 @@ section {
     color: var(--white);
 }
 
-.products .box-container .box .image .icons .cart-btn{
+.obat .box-container .box .image .icons .cart-btn{
     border-left: .1rem solid var(--red);
     border-right: .1rem solid var(--box-shadow);
     width:100%;
 }
 
-.products .box-container .box .image .icons a:hover{
+.obat .box-container .box .image .icons a:hover{
     background:var(--dark-color);
 }
 
-.products .box-container .box .content{
+.obat .box-container .box .content{
     padding:2rem;
     text-align: center;
 }
 
-.products .box-container .box .content h3{
+.obat .box-container .box .content h3{
     font-size: 2.5rem;
     color:var(--dark-color);
 }
 
-.products .box-container .box .content .price{
+.obat .box-container .box .content .price{
     font-size: 2.5rem;
     color:var(--pink);
     font-weight: bolder;
     padding-top: 1rem;
 }
 
-.products .box-container .box .content .price span{
+.obat .box-container .box .content .price span{
     font-size: 1.5rem;
     color:var(--pink);
     font-weight: lighter;

@@ -17,9 +17,9 @@
     include 'navbar.php';
     ?>
 
-    <!-- prodcuts section starts  -->
+    <!-- obat section starts  -->
 
-    <section class="products" id="products">
+    <section class="obat" id="obat">
 
         <h1 class="heading"> obat </h1>
         <div class="box-container">
@@ -49,7 +49,7 @@
 
     </section>
 
-    <!-- prodcuts section ends -->
+    <!-- obat section ends -->
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>
