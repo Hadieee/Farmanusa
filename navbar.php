@@ -46,8 +46,11 @@ $offer_url = current_url();
                 </div>
             </div>
             <div class="user">
-
-                <a onclick=loggingPop()><i class="fas fa-user"></i><span>Login</span></a>
+                <a onclick="loggingPop();
+                            document.querySelector('.kepala').classList.toggle('active');
+                            document.querySelector('#menu-btn').style.left = '50px';
+                            document.querySelector('#menu-btn').classList.toggle('fa-times');">
+                <i class="fas fa-user"></i><span>Login</span></a>
             </div>
         </div>
         <div><i id="menu-btn" class="fas fa-bars"></i></div>
