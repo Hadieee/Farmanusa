@@ -1,42 +1,26 @@
-<?php
-    require "navbar.php";
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css">
-</head>
-
-<body>
-    <div>
-    <section class="home">
-        <table id='login_form' border=1>
-            <br>
+<div class="popup" id="popup">
+    <form class="login">
+        <table align="center">
             <tr>
-                <td class='tbtext' width=49%>Username</td>
-                <td class='tbtext'>:</td>
-                <td class='tbinput' widrh=49%><input type="text" name="username"/></td>
+                <td align="right">Username</td>
+                <td> <center>:</center></td>
+                <td align="left"><input type="text" size="20" maxlength="15" name="username"></td>
             </tr>
             <tr>
-                <td class='tbtext'>Password</td>
-                <td class='tbtext'>:</td>
-                <td class='tbinput'><input type="password" name="password"/></td>
+                <td align="right">Password</td>
+                <td> <center>:</center></td>
+                <td align="left"><input size=\"20\" type="password" size="20" maxlength="15" name="password"></td>
             </tr>
             <tr>
-                <td colspan="3" align="center"><input type="submit"
-                    value="Login"> </td>
+                <td align="center" colspan="3" style="padding-top: 10px;">
+                        <button type="submit" value="Login" class="inLoginButton"> <a href=""> Login </a> </button>
+                        <button class="inLoginButton"> <a href=""> Batalkan </a></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center" style="font-size: medium; padding-top: 10px;">
+                Belum punya akun? <a href=""> Daftar Sekarang </td>
             </tr>
         </table>
-    </section>
-    </div>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
-
-</html>
+    </form>
+</div>
