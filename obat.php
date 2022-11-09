@@ -1,7 +1,6 @@
 <?php
     require('db-connect.php');
     $result = mysqli_query($db, "SELECT * FROM obat");
-    $obat = [];
     while($row = mysqli_fetch_assoc($result)){
         $obat[] = $row;
     }
@@ -33,7 +32,7 @@
         <h1 class="heading"> obat </h1>
         <div class="box-container">
         <?php   
-            if(!isset($obat)){
+            if(isset($obat)){
                 foreach($obat as $obt):
         ?>
             <div class="box">
@@ -48,7 +47,7 @@
                 </div>
                 <div class="content">
                     <h3><?php echo $obt['nama_obat']; ?></h3>
-                    <div class="price"><?php echo $obt['harga_obat']; ?><span>$4.99</span> </div>
+                    <div class="price">Rp.<?php echo $obt['harga_obat']; ?><span>Rp.<?php echo $obt['harga_obat']; ?></span> </div>
                 </div>
             </div>
         <?php

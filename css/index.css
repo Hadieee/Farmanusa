@@ -452,10 +452,6 @@ section {
     gap:2rem;
 }
 
-.about .row .image{
-    flex:1 1 45rem;
-}
-
 .about .row .image img{
     width: 100%;
     box-shadow: var(--box-shadow);
