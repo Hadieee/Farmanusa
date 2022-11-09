@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td colspan="3" align="center" id="regist_btn">
-                Belum punya akun? <a href=""> Daftar Sekarang </a></td>
+                Belum punya akun? <a onclick=loggingPop()> Daftar Sekarang </a></td>
             </tr>
         </table>
     </form>

@@ -69,6 +69,8 @@
 
     <?php include 'footer.php' ?>
 
+    <?php require 'login.php';?>
+
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 

@@ -42,12 +42,12 @@ $offer_url = current_url();
                 ?>
                 
                 <div>
-                    <a href=""><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
+                    <a href="" onclick=inconstruct()><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
                 </div>
             </div>
             <div class="user">
 
-                <a onclick="document.getElementById('popup').style.display = 'flex';"><i class="fas fa-user"></i><span>Login</span></a>
+                <a onclick=loggingPop()><i class="fas fa-user"></i><span>Login</span></a>
             </div>
         </div>
         <div><i id="menu-btn" class="fas fa-bars"></i></div>

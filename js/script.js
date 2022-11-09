@@ -66,3 +66,18 @@ if(img_dark && img_light){
         localStorage.setItem('theme', targetTheme);
     }
 }
+
+function inconstruct(){
+    alert(" Bagian ini masih dalam pengembangan.");
+}
+
+function loggingPop(){
+    if(document.getElementById('popup').style.display != 'flex'){
+        document.getElementById('popup2').style.display = 'none';
+        document.getElementById('popup').style.display = 'flex';
+    }
+    else{
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('popup2').style.display = 'flex';
+    }
+}
