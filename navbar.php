@@ -1,14 +1,38 @@
+<?php
+function current_url()
+{
+    $url      = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    $validURL = str_replace("&", "&amp;", $url);
+    $legitURL = explode('/', $validURL);
+    return end($legitURL);
+}
+//echo "page URL is : ".current_url();
+
+$offer_url = current_url();
+
+?>
+
 <div class="tempat">
     <nav class="kepala">
         <a href="" class="logo"><i class="fas fa-heart"></i><span>Farmanusa</span></a>
         <div class="muka">
             <div class="navbar">
-                <div>
-                    <a href="index.php"><i class="fas fa-home"></i><span>Home</span></a>
-                </div>
-                <div>
-                    <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Obat<span></a>
-                </div>
+                <?php 
+                if ($offer_url != 'index.php'){
+                echo'
+                    <div>
+                        <a href="index.php"><i class="fas fa-home"></i><span> Home </span></a>
+                    </div>';
+                }
+
+                if($offer_url != 'obat.php'){
+                echo'
+                    <div>
+                        <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Obat<span></a>
+                    </div>';
+                }
+
+                ?>
                 <div>
                     <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Apoteker</span></a>
                 </div>
