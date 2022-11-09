@@ -240,6 +240,7 @@ section {
     font-size: 1.7rem;
     color: var(--red);
     line-height: 1.8;
+    text-align: justify;
 }
 
 .heading{
@@ -499,6 +500,8 @@ section {
     padding:1rem 0;
     font-size: 1.5rem;
     line-height: 1.8;
+    text-align: justify;
+    text-indent: 3em;
 }
 
 .dark_mode {
