@@ -16,8 +16,8 @@
 html[data-theme='light'] {
     --red: #e44738;
     --white: white;
-    --pink: pink;
-    --light-color: rgb(240, 234, 233);
+    --pink: rgb(255, 82, 82);
+    --light-color: rgb(128, 128, 128);
     --dark-color: #ff0000;
     --box-shadow: .5rem .5rem 0 rgba(253, 90, 128, 0.292);
     --text-shadow: .4rem .4rem 0 rgba(184, 43, 72, 0.3);
@@ -63,29 +63,6 @@ section {
     z-index: 2;
 }
 
-/* ----------------------   LOGIN PLACE    ------------------------*/
-.popup .login center{
-    text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.popup td{
-    padding-top: 5px;
-}
-
-.popup .login table input{
-    font-size: x-large;
-    border: 1px solid var(--dark-color);
-}
-
-.popup .login table{
-    font-size: x-large;
-    background-color: var(--light-color);
-    padding: 50px;
-    border-radius: 5%;
-}
-
 .popup .login {
     display: flex;
     margin: auto;
@@ -106,22 +83,6 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.inLoginButton :link, .inLoginButton :visited{
-    color: black;
-    padding: 5px;
-    font-size: medium;
-    border-radius: 10%;
-    background-color: white;
-    border: 2px solid var(--dark-color);
-}
-
-.inLoginButton :hover{
-    background-color: rgb(176, 176, 176);
-    color: #041C32;
-}
-
-/* ----------------------  ///    ------------------------*/
-
 .tempat{
     display: flex;
     z-index: 2000;
@@ -135,6 +96,7 @@ section {
     flex-direction: column;
     width: auto;
     height: 100%;
+    /* box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08); */
     box-shadow: 0.5px 0 0.5rem var(--dark-color);
 }
 
@@ -204,7 +166,7 @@ section {
 }
 
 .badan{
-    margin-top: 75px;
+    margin: 75px 0px;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -219,6 +181,7 @@ section {
 
 .home .image {
     flex: 1 1 45rem;
+    /* padding: 4rem 4rem 0rem 4rem; */
 }
 
 .home .image object {
@@ -227,6 +190,7 @@ section {
 
 .home .content {
     flex: 1 1 45rem;
+    /* padding: 0rem 3rem 4rem 3rem; */
 }
 
 .home .content h3 {
@@ -238,13 +202,13 @@ section {
 
 .home .content p {
     font-size: 1.7rem;
-    color: var(--red);
+    color: var(--light-color);
     line-height: 1.8;
-    text-align: justify;
 }
 
 .heading{
     text-align: center;
+    padding-top: 75px;
     padding-bottom: 2rem;
     text-shadow: var(--text-shadow);
     text-transform: uppercase;
@@ -308,6 +272,17 @@ section {
     z-index: 100;
 }
 
+.kosong{
+    display: flex;
+    color: var(--red);
+    height: 60vh;
+    text-align: center;
+    flex-direction: column;
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 20vh;
+}
+
 .obat .box-container{
     display: flex;
     justify-content: space-around;
@@ -339,13 +314,16 @@ section {
 .obat .box-container .box .image{
     position: relative;
     text-align: center;
-    padding-top: 2rem;
-    overflow:hidden;
+    padding: 2rem 2rem 0 2rem;
+    overflow: hidden;
+    height: 25rem; 
 }
 
 .obat .box-container .box .image img{
-    height:25rem;
-    width: 25rem;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .obat .box-container .box:hover .image img{
@@ -496,12 +474,10 @@ section {
 }
 
 .about .row .content p{
-    color: var(--red);
+    color: var(--light-color);
     padding:1rem 0;
     font-size: 1.5rem;
     line-height: 1.8;
-    text-align: justify;
-    text-indent: 3em;
 }
 
 .dark_mode {
@@ -587,6 +563,13 @@ section {
     color:var(--red);
 }
 
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
 
 @media only screen and (max-width: 420px) {
     .kepala.active .dark_mode {

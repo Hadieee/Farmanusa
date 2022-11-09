@@ -37,9 +37,8 @@
                 <h3>Your Wellness Is Our Priority.</h3>
                 <p>
                     Selamat datang di Farmanusa,
-                    di mana kesehatan Anda adalah
-                    jantung kehidupan Kami
-                </p>.
+                    dimana Wellness anda adalah
+                    jantung kehidupan kami</p>
                 <a href="#about" class="btn"> Tentang Kami <span class="fas fa-chevron-right"></span> </a>
             </div>
         </div>
@@ -63,9 +62,9 @@
                 <h3>we take care of your healthy life</h3>
                 <p>APOTEK Farmanusa merupakan perusahaan Ritel Farmasi pertama dengan Reputasi Nasional melalui :</p>
                 <p>Pengembangan brand dan image yang bertujuan untuk memberikan jaminan kepada pasien atau masyarakat terhadap kualitas,
-                    Ketelitian pembacaan resep maupun peracikan obat, Kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien.</p>
-                <p>Pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, Keramahan seluruh karyawan apotek dalam melayani pasien,
-                    Kejujuran serta kesahajaan dari pelayanan pelanggan sebagai suatu nilai tambah penting terhadap produk obat-obatan yang ditawarkan oleh apotek. Pembenahan secara terus-menerus dipastikan dilakukan pada seluruh cabang Apotek Farmanusa.</p>
+                    Ketelitian pembacaan resep maupun peracikan obat, Kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien. Pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, Keramahan seluruh karyawan apotek dalam melayani pasien,
+                    Kejujuran serta kesahajaan dari pelayanan pelanggan sebagai suatu nilai tambah penting terhadap produk obat-obatan yang ditawarkan oleh apotek.
+                    Pembenahan secara terus-menerus dipastikan dilakukan pada seluruh cabang Apotek Farmanusa .</p>
             </div>
 
         </div>
@@ -76,7 +75,7 @@
 
     <!-- footer section starts  -->
 
-    <section class="footer">
+    <!-- <section class="footer">
 
         <div class="box-container">
 
@@ -112,13 +111,31 @@
 
         <div class="credit"> created by <span>Farmanusa's Team Website Development</span> | all rights NOT reserved </div>
 
-    </section>
+    </section> -->
+
+    <?php include 'footer.php' ?>
 
     <!-- footer section ends  -->
 
     <!-- pop up login starts  -->
 
-    <?php require 'login-page.php'; ?>
+    <div class="popup" id="popup">
+        <form class="login">
+            <table align="center">
+                <tr>
+                    <td align="center">Username: </td>
+                    <td align="center"><input type="text" size="20" maxlength="15" name="username"></td>
+                </tr>
+                <tr>
+                    <td align="center">Password: </td>
+                    <td align="center"><input size=\"20\" type="password" size="20" maxlength="15" name="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Login"> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
     <!-- pop up login ends  -->
 
