@@ -17,7 +17,9 @@
     include 'navbar.php';
     ?>
 
-    <section class="doctors" id="doctors">
+    <!-- apoteker section starts -->
+
+    <section class="apoteker" id="apoteker">
 
         <h1 class="heading">apoteker</h1>
 
@@ -42,7 +44,7 @@
         </div>
     </section>
 
-    <!-- doctors section ends -->
+    <!-- apoteker section ends -->
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>
