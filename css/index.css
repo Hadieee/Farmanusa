@@ -263,7 +263,7 @@ section {
 }
 
 .badan{
-    margin-top: 75px;
+    margin:75px 0;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -529,6 +529,7 @@ section {
 
 .about .row{
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap:2rem;
