@@ -1,6 +1,12 @@
 <?php
     require('db-connect.php');
-    $result = mysqli_query($db, "SELECT * FROM obat");
+    if(!isset($_POST['Cari'])){
+        $result = mysqli_query($db, "SELECT * FROM obat WHERE stok_obat > 0");
+    }
+    else{
+        $cari = $_POST['Search'];
+        $result = mysqli_query($db, "SELECT * FROM obat WHERE nama_obat LIKE'%$cari%' AND stok_obat > 0");
+    }
     while($row = mysqli_fetch_assoc($result)){
         $obat[] = $row;
     }
@@ -30,6 +36,16 @@
     <section class="obat" id="obat">
 
         <h1 class="heading"> obat </h1>
+        <?php 
+            if(isset($obat) or isset($_POST['Cari'])){
+        ?>
+            <form id="searchObat" action="" method="POST">
+                <input type="text" value="" name="Search" placeholder="Cari Nama Obat">
+                <button type="submit" name="Cari"> O </button>
+            </form>
+        <?php
+            }
+        ?>
         <div class="box-container">
         <?php   
             if(isset($obat)){
@@ -53,6 +69,7 @@
         <?php
                 endforeach;
             } else {
+            if(!isset($_POST['Cari'])){
         ?>
         <div class="kosong">
             <h3>Mohon Maaf</h3>
@@ -62,6 +79,18 @@
             </p> 
         </div>
         <?php
+            } else {
+        ?>
+        <div class="kosong">
+            <h3>Mohon Maaf</h3>
+            <p>
+                Obat yang anda cari
+                tidak ada di daftar obat
+                kami atau stok kosong
+            </p> 
+        </div>
+        <?php
+            }
             }
         ?>
         </div>

@@ -451,6 +451,27 @@ section {
     z-index: 100;
 }
 
+#searchObat{
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#searchObat input{
+    border-top: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
+    font-size: large;
+}
+
+#searchObat button{
+    border-top: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
+    font-size: large;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .obat .box-container{
     display: flex;
     justify-content: space-around;
