@@ -82,8 +82,8 @@
 
         <div class="box">
             <h3>our services</h3>
-            <a href="#"> <i class="fas fa-chevron-right"></i> obat </a>
-            <a href="#"> <i class="fas fa-chevron-right"></i> apoteker </a>
+            <a href="obat.php"> <i class="fas fa-chevron-right"></i> obat </a>
+            <a href="apoteker.php"> <i class="fas fa-chevron-right"></i> apoteker </a>
             <a onclick="document.getElementById('popup').style.display = 'block';"> <i class="fas fa-chevron-right"></i> login </a>
         </div>
 
