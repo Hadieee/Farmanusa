@@ -47,7 +47,7 @@
                 </div>
                 <div class="content">
                     <h3><?php echo $obt['nama_obat']; ?></h3>
-                    <div class="price"><?php echo $obt['harga_obat']; ?><span>$4.99</span> </div>
+                    <div class="price">Rp.<?php echo $obt['harga_obat']; ?><span>Rp.<?php echo $obt['harga_obat']; ?></span> </div>
                 </div>
             </div>
         <?php
