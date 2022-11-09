@@ -14,7 +14,7 @@ $offer_url = current_url();
 
 <div class="tempat">
     <nav class="kepala">
-        <a href="" class="logo"><i class="fas fa-heart"></i><span>Farmanusa</span></a>
+        <a href="#" class="logo"><i class="fas fa-heart"></i><span>Farmanusa</span></a>
         <div class="muka">
             <div class="navbar">
                 <?php 
@@ -32,10 +32,14 @@ $offer_url = current_url();
                     </div>';
                 }
 
-                ?>
+                if($offer_url != 'apoteker.php'){
+                echo'
                 <div>
                     <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Apoteker</span></a>
-                </div>
+                </div>';
+                }
+
+                ?>
                 <div>
                     <a href=""><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
                 </div>

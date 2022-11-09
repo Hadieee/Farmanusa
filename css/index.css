@@ -63,6 +63,29 @@ section {
     z-index: 2;
 }
 
+/* ----------------------   LOGIN PLACE    ------------------------*/
+.popup .login center{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.popup td{
+    padding-top: 5px;
+}
+
+.popup .login table input{
+    font-size: x-large;
+    border: 1px solid var(--dark-color);
+}
+
+.popup .login table{
+    font-size: x-large;
+    background-color: var(--light-color);
+    padding: 50px;
+    border-radius: 5%;
+}
+
 .popup .login {
     display: flex;
     margin: auto;
@@ -82,6 +105,22 @@ section {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+.inLoginButton :link, .inLoginButton :visited{
+    color: black;
+    padding: 5px;
+    font-size: medium;
+    border-radius: 10%;
+    background-color: white;
+    border: 2px solid var(--dark-color);
+}
+
+.inLoginButton :hover{
+    background-color: rgb(176, 176, 176);
+    color: #041C32;
+}
+
+/* ----------------------  ///    ------------------------*/
 
 .tempat{
     display: flex;
