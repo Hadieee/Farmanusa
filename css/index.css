@@ -238,7 +238,7 @@ section {
 
 .home .content p {
     font-size: 1.7rem;
-    color: var(--light-color);
+    color: var(--red);
     line-height: 1.8;
 }
 
@@ -495,7 +495,7 @@ section {
 }
 
 .about .row .content p{
-    color: var(--light-color);
+    color: var(--red);
     padding:1rem 0;
     font-size: 1.5rem;
     line-height: 1.8;
