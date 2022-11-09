@@ -38,7 +38,8 @@
                 <p>
                     Selamat datang di Farmanusa,
                     di mana kesehatan Anda adalah
-                    jantung kehidupan Kami</p>.
+                    jantung kehidupan Kami
+                </p>.
                 <a href="#about" class="btn"> Tentang Kami <span class="fas fa-chevron-right"></span> </a>
             </div>
         </div>
@@ -117,7 +118,7 @@
 
     <!-- pop up login starts  -->
 
-    <?php require 'login-page.php';?>
+    <?php require 'login-page.php'; ?>
 
     <!-- pop up login ends  -->
 
