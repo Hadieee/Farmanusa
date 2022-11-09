@@ -1,7 +1,6 @@
 <?php
     require('db-connect.php');
     $result = mysqli_query($db, "SELECT * FROM obat");
-    $obat = [];
     while($row = mysqli_fetch_assoc($result)){
         $obat[] = $row;
     }
@@ -33,7 +32,7 @@
         <h1 class="heading"> obat </h1>
         <div class="box-container">
         <?php   
-            if(!isset($obat)){
+            if(isset($obat)){
                 foreach($obat as $obt):
         ?>
             <div class="box">

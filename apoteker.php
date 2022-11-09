@@ -1,7 +1,6 @@
 <?php
     require('db-connect.php');
     $result = mysqli_query($db, "SELECT * FROM user WHERE tipe_akun = 'apoteker'");
-    $apoteker = [];
     while($row = mysqli_fetch_assoc($result)){
         $apoteker[] = $row;
     }
@@ -34,12 +33,12 @@
 
         <div class="box-container">
             <?php
-            if(!isset($apoteker)){
+            if(isset($apoteker)){
                 foreach ($apoteker as $staff):
             ?>
                 <div class="box">
                     <img src="image/blog-2.jpg" alt="">
-                    <h1>Heidar Sadhana</h1>
+                    <h1><?php echo staff['username'] ?></h1>
                     <span>expert fharmachist</span>
                     <div class="share">
                         <a href="#" class="fab fa-facebook-f"></a>
