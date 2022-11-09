@@ -49,8 +49,6 @@ $offer_url = current_url();
         <div class="dark_mode">
             <input type="checkbox" class="checkbox" id="toggle" />
             <label class="label" for="toggle">
-                <!-- <i class="fas fa-moon"></i> -->
-                <!-- <i class="fas fa-sun"></i> -->
                 <div class="ball"></div>
             </label>
         </div>

@@ -96,7 +96,6 @@ section {
     flex-direction: column;
     width: auto;
     height: 100%;
-    /* box-shadow: 1rem 0 3rem rgba(0, 0, 0, .08); */
     box-shadow: 0.5px 0 0.5rem var(--dark-color);
 }
 
@@ -181,7 +180,6 @@ section {
 
 .home .image {
     flex: 1 1 45rem;
-    /* padding: 4rem 4rem 0rem 4rem; */
 }
 
 .home .image object {
@@ -190,7 +188,6 @@ section {
 
 .home .content {
     flex: 1 1 45rem;
-    /* padding: 0rem 3rem 4rem 3rem; */
 }
 
 .home .content h3 {
@@ -548,13 +545,6 @@ section {
     color:var(--red);
 }
 
-.fa-moon {
-    color: #f1c40f;
-}
-
-.fa-sun {
-    color: #f39c12;
-}
 
 @media only screen and (max-width: 420px) {
     .kepala.active .dark_mode {
