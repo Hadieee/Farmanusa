@@ -21,7 +21,7 @@
 
     <section class="products" id="products">
 
-        <h1 class="heading"> latest <span>products</span> </h1>
+        <h1 class="heading"> obat </h1>
         <div class="box-container">
         <?php   
          for($i=0;$i<4;$i++){
@@ -30,7 +30,7 @@
                 <div class="box">
                     <span class="discount">-10%</span>
                     <div class="image">
-                        <img src="image/doc-1.jpg" alt="">
+                        <img src="image/obat-1.jpg" alt="">
                         <div class="icons">
                             <a href="#" class="fas fa-heart"></a>
                             <a href="#" class="cart-btn">add to cart</a>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="content">
                         <h3>Medicina</h3>
-                        <div class="price"> $12.99 <span>$15.99</span> </div>
+                        <div class="price"> $4.49 <span>$4.99</span> </div>
                     </div>
                 </div>
                 <?php

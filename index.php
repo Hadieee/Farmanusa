@@ -34,9 +34,12 @@
                 </div>
             </div>
             <div class="content">
-                <h3>stay safe, stay healthy</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed autem vero? Magnam, est laboriosam!</p>
-                <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
+                <h3>Your Wellness Is Our Priority.</h3>
+                <p>
+                    Selamat datang di Farmanusa,
+                    dimana Wellness anda adalah
+                    jantung kehidupan kami</p>
+                <a href="#about" class="btn"> Tentang Kami <span class="fas fa-chevron-right"></span> </a>
             </div>
         </div>
     </section>
@@ -57,9 +60,11 @@
 
             <div class="content">
                 <h3>we take care of your healthy life</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates voluptatibus a nihil temporibus deserunt vel?</p>
-                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                <p>APOTEK Farmanusa merupakan perusahaan Ritel Farmasi pertama dengan Reputasi Nasional melalui :</p>
+                <p>Pengembangan brand dan image yang bertujuan untuk memberikan jaminan kepada pasien atau masyarakat terhadap kualitas,
+                    Ketelitian pembacaan resep maupun peracikan obat, Kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien. Pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, Keramahan seluruh karyawan apotek dalam melayani pasien,
+                    Kejujuran serta kesahajaan dari pelayanan pelanggan sebagai suatu nilai tambah penting terhadap produk obat-obatan yang ditawarkan oleh apotek.
+                    Pembenahan secara terus-menerus dipastikan dilakukan pada seluruh cabang Apotek Farmanusa .</p>
             </div>
 
         </div>
@@ -70,42 +75,43 @@
 
     <!-- footer section starts  -->
 
-<section class="footer">
+    <section class="footer">
 
-    <div class="box-container">
+        <div class="box-container">
 
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
-            <a href="#about"> <i class="fas fa-chevron-right"></i> about us</a>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
+                <a href="#about"> <i class="fas fa-chevron-right"></i> about us</a>
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="obat.php"> <i class="fas fa-chevron-right"></i> obat </a>
+                <a href="apoteker.php"> <i class="fas fa-chevron-right"></i> apoteker </a>
+                <a href=""> <i class="fas fa-chevron-right"></i> keranjang </a>
+                <a onclick="document.getElementById('popup').style.display = 'block';"> <i class="fas fa-chevron-right"></i> login </a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> farmanusa@gmail.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Samarinda, indonesia - 141122 </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+
         </div>
 
-        <div class="box">
-            <h3>our services</h3>
-            <a href="obat.php"> <i class="fas fa-chevron-right"></i> obat </a>
-            <a href="apoteker.php"> <i class="fas fa-chevron-right"></i> apoteker </a>
-            <a onclick="document.getElementById('popup').style.display = 'block';"> <i class="fas fa-chevron-right"></i> login </a>
-        </div>
+        <div class="credit"> created by <span>Farmanusa's Team Website Development</span> | all rights NOT reserved </div>
 
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-            <a href="#"> <i class="fas fa-envelope"></i> farmanusa@gmail.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Samarinda, indonesia - 141122 </a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-        </div>
-
-    </div>
-
-    <div class="credit"> created by <span>Farmanusa's Team Website Development</span> | all rights NOT reserved </div>
-
-</section>
+    </section>
 
     <!-- footer section ends  -->
 
@@ -128,9 +134,9 @@
             </table>
         </form>
     </div>
-    
+
     <!-- pop up login ends  -->
-    
+
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
