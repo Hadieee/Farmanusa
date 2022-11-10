@@ -1,6 +1,6 @@
 <?php
+    require 'db-connect.php';
     require 'register.php';
-    
 ?>
 
 <div class="popup" id="popup">
@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td align="center" colspan="3" style="padding-top: 10px;">
-                        <button type="submit" value="login" class="inLoginButton"><a>Login</a></button>
+                        <button type="submit" name="login" class="inLoginButton"><a> Login </a></button>
                         <button class="inLoginButton"> <a href="">Batalkan</a></button>
                 </td>
             </tr>
@@ -37,8 +37,7 @@
                 document.getElementById('popup').style.display = 'none';
             </script>
     <?php    
-        }
-    
+    }
     if(isset($_POST["login"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
@@ -55,7 +54,7 @@
     
                 ?>
                 <script>
-                    alert('Selamat Datang $username');
+                    alert('Selamat Datang <?php $username ?>');
                     document.location.href = '';
                     </script>";
                 <?php    
