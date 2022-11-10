@@ -9,7 +9,7 @@
             <tr>
                 <td align="right"> Username </td>
                 <td> <center>:</center></td>
-                <td align="left"><input type="text" maxlength="15" name="username" required></td>
+                <td align="left"><input type="text" name="username" required></td>
             </tr>
             <tr>
                 <td align="right">Password</td>
@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td align="center" colspan="3" style="padding-top: 10px;">
-                        <button type="submit" name="login" class="inLoginButton"><a> Login </a></button>
+                        <button type="submit" name="login" class="btn"> Login </button>
                         <button class="inLoginButton"> <a href="">Batalkan</a></button>
                 </td>
             </tr>
@@ -50,7 +50,8 @@
 
         if(isset($account['tipe_akun'])){
             if(password_verify($password, $account['password'])){
-                //$_SESSION['login'] = $account['jenis'];
+                $_SESSION['user'] = $account['username'];
+                $_SESSION['tipe_akun'] = $account['tipe_akun'];
     
                 ?>
                 <script>
