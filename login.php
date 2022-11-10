@@ -14,12 +14,12 @@
             <tr>
                 <td align="right">Password</td>
                 <td> <center>:</center></td>
-                <td align="left"><input type="password" maxlength="15" name="password" required></td>
+                <td align="left"><input type="password" name="password" required></td>
             </tr>
             <tr>
                 <td align="center" colspan="3" style="padding-top: 10px;">
-                        <button type="submit" name="login" class="btn"> Login </button>
-                        <button class="inLoginButton"> <a href="">Batalkan</a></button>
+                    <button type="submit" name="login" class="inLoginButton"> Login </button>
+                    <button class="inLoginButton" onclick="document.getElementById('popup').style.display = 'none';">Batalkan</button>
                 </td>
             </tr>
             <tr>
@@ -52,14 +52,21 @@
             if(password_verify($password, $account['password'])){
                 $_SESSION['user'] = $account['username'];
                 $_SESSION['tipe_akun'] = $account['tipe_akun'];
-    
+                if($_SESSION['tipe_akun'] == 'admin' || $_SESSION['tipe_akun'] == 'apoteker'){
+                ?>
+                    <script>
+                        document.location.href = './admin';
+                    </script>";
+                <?php
+                }else{
                 ?>
                 <script>
-                    alert('Selamat Datang <?php $username ?>');
+                    alert('Selamat Datang <?php echo $username ?>');
                     document.location.href = '';
                     </script>";
                 <?php    
             }
+        }
             else{
                 ?>
 

@@ -1,9 +1,17 @@
 <?php
+    session_start();
     require('db-connect.php');
-    $result = mysqli_query($db, "SELECT * FROM user WHERE tipe_akun = 'apoteker'");
+    if(!isset($_POST['Cari'])){
+        $result = mysqli_query($db, "SELECT * FROM user WHERE tipe_akun = 'apoteker'");
+    }
+    else{
+        $cari = $_POST['Search'];
+        $result = mysqli_query($db, "SELECT * FROM user WHERE username LIKE '%$cari%' AND tipe_akun = 'apoteker'");
+    }
     while($row = mysqli_fetch_assoc($result)){
         $apoteker[] = $row;
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +30,7 @@
 <body>
 
     <?php
-    include 'navbar.php';
+        include 'navbar.php';
     ?>
 
     <!-- apoteker section starts -->
@@ -30,7 +38,16 @@
     <section class="apoteker" id="apoteker">
 
         <h1 class="heading">apoteker</h1>
-
+        <?php 
+            if(isset($apoteker) or isset($_POST['Cari'])){
+        ?>
+            <form id="searchObat" action="" method="POST">
+                <input type="text" value="" name="Search" placeholder="Cari Nama Apoteker">
+                <button type="submit" name="Cari"> O </button>
+            </form>
+        <?php
+            }
+        ?>
         <div class="box-container">
             <?php
             if(isset($apoteker)){
@@ -50,17 +67,29 @@
             <?php
                 endforeach;
             } else {
-            ?>
-            <div class="kosong">
-                <h3>Mohon Maaf</h3>
-                <p>
-                    Belum Ada Apoteker yang 
-                    Bekerja di Farmanusa
-                </p> 
-            </div>
-            <?php
-            }
-            ?>
+                if(!isset($_POST['Cari'])){
+                    ?>
+                    <div class="kosong">
+                        <h3>Mohon Maaf</h3>
+                        <p>
+                            Belum Ada Apoteker yang 
+                            Bekerja di Farmanusa
+                        </p> 
+                    </div>
+                    <?php
+                        } else {
+                    ?>
+                    <div class="kosong">
+                        <h3>Mohon Maaf</h3>
+                        <p>
+                            Apoteker yang anda cari tidak 
+                            ada di daftar apoteker kami
+                        </p> 
+                    </div>
+                    <?php
+                        }
+                        }
+                    ?>
         </div>
     </section>
 

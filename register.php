@@ -5,7 +5,7 @@
                 <td align="left">Email:</td>
             </tr>
             <tr>
-                <td colspan="2" align="left"><input type="text" maxlength="15" 
+                <td colspan="2" align="left"><input type="text"  
                 value = "<?php echo isset($_POST['register'])? $_POST['email'] : ''?>"
                 name="email"
                 required></td>
@@ -17,7 +17,7 @@
                 <td align="left">Username:</td>
             </tr>
             <tr>
-                <td align="left"><input type="text" maxlength="15"
+                <td align="left"><input type="text"
                 value = "<?php echo isset($_POST['register'])? $_POST['username_reg'] : ''?>"
                 name="username_reg" required></td>
             </tr>
@@ -28,14 +28,14 @@
                 <td align="left">Password:</td>
             </tr>
             <tr>
-                <td align="left"><input type="password" maxlength="15"
+                <td align="left"><input type="password" 
                 name="password_reg" required></td>
             </tr>
             <tr>
                 <td align="left">Konfirmasi Password:</td>
             </tr>
             <tr>
-                <td align="left"><input type="password" maxlength="15" name="password_konf" required></td>
+                <td align="left"><input type="password" name="password_konf" required></td>
             </tr>
             <tr>
                 <td colspan="2" align="left" class="CheckInp" style="color:red"></td>

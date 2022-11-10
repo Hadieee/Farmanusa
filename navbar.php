@@ -48,24 +48,28 @@ $offer_url = current_url();
                 ?>
                 
             </div>
-            <div class="user">
+            
                 <?php 
                     if(isset($_SESSION['user'])){
                 ?>
-                    <a href="profile.php">
-                    <i class="fas fa-user"></i><span><?php echo $_SESSION['user']; ?></span></a>
+                <div class="user">
+                    <a href="logout.php"><i class="fas fa-user"></i><span><?php echo $_SESSION['user']; ?></span></a>
+                    <a class="btn" href="logout.php">Logout</a>
+                </div>
                 <?php
                     }else{
                 ?>
+                <div class="user">
                     <a onclick="loggingPop();
                                 document.querySelector('.kepala').classList.toggle('active');
                                 document.querySelector('#menu-btn').style.left = '50px';
                                 document.querySelector('#menu-btn').classList.toggle('fa-times');">
                     <i class="fas fa-user"></i><span>Login</span></a>
+                </div>
                 <?php
                     }
                 ?>
-            </div>
+            
         </div>
         <div><i id="menu-btn" class="fas fa-bars"></i></div>
         <div class="dark_mode">

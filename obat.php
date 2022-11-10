@@ -1,4 +1,8 @@
 <?php
+    session_start();
+    if(!isset($_SESSION['user'])){
+        echo"<script>alert('Login Dulu Ya Dek');document.location.href = 'index.php';</script>";
+    }
     require('db-connect.php');
     if(!isset($_POST['Cari'])){
         $result = mysqli_query($db, "SELECT * FROM obat WHERE stok_obat > 0");
@@ -19,7 +23,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicina</title>
+    <title>Obat</title>
     <link rel="browser tab icon" href="./image/heart-health-48.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
@@ -28,7 +32,7 @@
 <body>
 
     <?php
-    include 'navbar.php';
+        include 'navbar.php';
     ?>
 
     <!-- obat section starts  -->
@@ -52,18 +56,16 @@
                 foreach($obat as $obt):
         ?>
             <div class="box">
-                <span class="discount">-10%</span>
+                <span class="stok"><?php echo $obt['stok_obat']; ?></span>
                 <div class="image">
                     <img src="image/obat-1.jpg" alt="">
                     <div class="icons">
-                        <a href="#" class="fas fa-heart"></a>
                         <a href="#" class="cart-btn">add to cart</a>
-                        <a href="#" class="fas fa-share"></a>
                     </div>
                 </div>
                 <div class="content">
                     <h3><?php echo $obt['nama_obat']; ?></h3>
-                    <div class="price">Rp.<?php echo $obt['harga_obat']; ?><span>Rp.<?php echo $obt['harga_obat']; ?></span> </div>
+                    <div class="price">Rp.<?php echo $obt['harga_obat']; ?></div>
                 </div>
             </div>
         <?php

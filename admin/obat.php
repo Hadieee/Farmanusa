@@ -10,6 +10,15 @@
     while($row = mysqli_fetch_assoc($result)){
         $obat[] = $row;
     }
+    session_start();
+    if(isset($_SESSION['tipe_akun'])){
+        if($_SESSION['tipe_akun'] != 'admin' && $_SESSION['tipe_akun'] != 'apoteker'){
+            echo "<script>
+                alert('Kamu Bukan Admin/Apoteker Woi');
+                document.location.href = '../';
+            </script>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +29,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicina</title>
-    <link rel="browser tab icon" href="./image/heart-health-48.png">
+    <link rel="browser tab icon" href="../image/heart-health-48.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
@@ -43,7 +52,7 @@
                 <button class="btn" style="padding:11.2px; margin-top: 0; display:flex; align-items:center;" onclick="document.querySelector('.popup').style.display = 'block'">+ Tambah Obat</button>
                 <form id="searchObat" action="" method="POST">
                     <input type="text" value="" name="Search" placeholder="Cari Nama Obat">
-                    <button type="submit" name="Cari"> O </button>
+                    <button class="btn" type="submit" name="Cari"> O </button>
                 </form>
             </div>
         <?php
@@ -55,17 +64,17 @@
                 foreach($obat as $obt):
         ?>
             <div class="box">
-                <span class="discount">-10%</span>
+                <span class="stok"><?php echo $obt['stok_obat']; ?></span>
                 <div class="image">
                     <img src="../image/obat-1.jpg" alt="">
                     <div class="icons">
-                        <a href="#" class="fas fa-pencil"></a>
-                        <a href="#" class="fas fa-trash"></a>
+                        <a href=<?php echo "crud-obat/update-obat.php?id=".$obt["id_obat"]?> class="fas fa-pencil"></a>
+                        <a href=<?php echo "crud-obat/hapus-obat.php?id=".$obt["id_obat"]?> class="fas fa-trash"></a>
                     </div>
                 </div>
                 <div class="content">
                     <h3><?php echo $obt['nama_obat']; ?></h3>
-                    <div class="price">Rp.<?php echo $obt['harga_obat']; ?><span>Rp.<?php echo $obt['harga_obat']; ?></span> </div>
+                    <div class="price">Rp.<?php echo $obt['harga_obat']; ?></div>
                 </div>
             </div>
         <?php
@@ -78,7 +87,7 @@
                 Belum Ada Obat yang 
                 tersedia di Farmanusa
             </p> 
-            <button class="btn">+ Tambah Obat</button>
+            <button class="btn" onclick="document.querySelector('.popup').style.display = 'block'">+ Tambah Obat</button>
         </div>
         <?php
             } else {
