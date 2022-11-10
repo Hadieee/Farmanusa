@@ -7,7 +7,7 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .2s ease-out;
     text-decoration: none;
 }
@@ -66,11 +66,6 @@ section {
 }
 
 /* ----------------------   LOGIN PLACE    ------------------------*/
-.CheckInp{
-    color: var(--red);
-    font-size: small;
-}
-
 .popup .login center{
     text-align: center;
     margin-left: 5px;
@@ -83,17 +78,17 @@ section {
 }
 
 .popup .login table input{
+    width: 100%;
     font-size: x-large;
     border: 1px solid var(--dark-color);
 }
 
 .popup .login table{
-    width: 80%;
     font-size: x-large;
     background-color: var(--white);
     padding: 50px;
     border: 1px solid var(--dark-color);
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 .popup .login {
@@ -116,7 +111,7 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.inLoginButton :link, .inLoginButton :visited, .inLoginButton a{
+.inLoginButton :link, .inLoginButton :visited{
     color: black;
     padding: 5px;
     font-size: medium;
@@ -124,10 +119,9 @@ section {
     background-color: white;
     box-shadow: var(--box-shadow);
     border: 2px solid var(--dark-color);
-    cursor:pointer;
 }
 
-.inLoginButton :hover, .inLoginButton a :hover{
+.inLoginButton :hover{
     background-color: rgb(176, 176, 176);
     color: #041C32;
 }
@@ -152,6 +146,7 @@ section {
     }
     
     .popup .login table input{
+        width: 100%;
         font-size: small;
         border: 1px solid var(--dark-color);
     }
@@ -165,7 +160,7 @@ section {
         border-radius: 5%;
     }
     
-    .inLoginButton :link, .inLoginButton :visited, .inLoginButton a{
+    .inLoginButton :link, .inLoginButton :visited{
         color: black;
         padding: 3px;
         font-size: smaller;
@@ -175,7 +170,7 @@ section {
         border: 1px solid var(--dark-color);
     }
     
-    .inLoginButton :hover, .inLoginButton a :hover{
+    .inLoginButton :hover{
         background-color: rgb(176, 176, 176);
         color: #041C32;
     }
@@ -240,10 +235,6 @@ section {
 
 
 @media screen and (max-width: 600px) {
-    .CheckInp{
-        color: var(--red);
-        font-size: smaller;
-    }
     
     .popup2 td{
         padding-top: 5px;
@@ -469,18 +460,28 @@ section {
 }
 
 #searchObat input{
-    border-top: 1px solid var(--dark-color);
-    border-bottom: 1px solid var(--dark-color);
+    border: 2px solid var(--red);
+    border-radius: 5px;
     font-size: large;
+    background-color: var(--white);
+    color: var(--red);
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+}
+
+#searchObat input::placeholder{
+    color: var(--red);
 }
 
 #searchObat button{
-    border-top: 1px solid var(--dark-color);
-    border-bottom: 1px solid var(--dark-color);
+    border: 2px solid var(--red);
+    background-color: var(--white);
+    color: var(--red);
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
     font-size: large;
     font-weight: bold;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 10px 15px;
 }
 
 .obat .box-container{

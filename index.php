@@ -59,7 +59,7 @@
             </div>
 
             <div class="content">
-                <h3>we take care of your healthy life</h3>
+                <h3>We Take Care of Your Healthy Life</h3>
                 <p>APOTEK Farmanusa merupakan perusahaan Ritel Farmasi pertama dengan Reputasi Nasional melalui :</p>
                 <p>Pengembangan brand dan image yang bertujuan untuk memberikan jaminan kepada pasien atau masyarakat terhadap kualitas,
                     Ketelitian pembacaan resep maupun peracikan obat, Kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien. Pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, Keramahan seluruh karyawan apotek dalam melayani pasien,
@@ -119,7 +119,7 @@
 
     <!-- pop up login starts  -->
 
-    <?php require 'login.php';?>
+    <?php require 'login.php'; ?>
 
     <!-- pop up login ends  -->
 
