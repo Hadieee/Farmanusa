@@ -387,6 +387,7 @@ section {
 }
 
 .heading{
+    margin-top: 25px;
     text-align: center;
     padding-bottom: 2rem;
     text-shadow: var(--text-shadow);
@@ -503,13 +504,16 @@ section {
 .obat .box-container .box .image{
     position: relative;
     text-align: center;
-    padding-top: 2rem;
+    padding: 2rem 2rem 0 2rem;
     overflow:hidden;
+    height: 25rem;
 }
 
 .obat .box-container .box .image img{
-    height:25rem;
-    width: 25rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .obat .box-container .box:hover .image img{
