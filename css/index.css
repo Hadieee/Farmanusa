@@ -66,6 +66,11 @@ section {
 }
 
 /* ----------------------   LOGIN PLACE    ------------------------*/
+.CheckInp{
+    color: var(--red);
+    font-size: small;
+}
+
 .popup .login center{
     text-align: center;
     margin-left: 5px;
@@ -111,7 +116,7 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.inLoginButton :link, .inLoginButton :visited{
+.inLoginButton :link, .inLoginButton :visited, .inLoginButton a{
     color: black;
     padding: 5px;
     font-size: medium;
@@ -119,9 +124,10 @@ section {
     background-color: white;
     box-shadow: var(--box-shadow);
     border: 2px solid var(--dark-color);
+    cursor:pointer;
 }
 
-.inLoginButton :hover{
+.inLoginButton :hover, .inLoginButton a :hover{
     background-color: rgb(176, 176, 176);
     color: #041C32;
 }
@@ -159,7 +165,7 @@ section {
         border-radius: 5%;
     }
     
-    .inLoginButton :link, .inLoginButton :visited{
+    .inLoginButton :link, .inLoginButton :visited, .inLoginButton a{
         color: black;
         padding: 3px;
         font-size: smaller;
@@ -169,7 +175,7 @@ section {
         border: 1px solid var(--dark-color);
     }
     
-    .inLoginButton :hover{
+    .inLoginButton :hover, .inLoginButton a :hover{
         background-color: rgb(176, 176, 176);
         color: #041C32;
     }
@@ -234,6 +240,10 @@ section {
 
 
 @media screen and (max-width: 600px) {
+    .CheckInp{
+        color: var(--red);
+        font-size: smaller;
+    }
     
     .popup2 td{
         padding-top: 5px;
@@ -387,6 +397,7 @@ section {
 }
 
 .heading{
+    margin-top: 25px;
     text-align: center;
     padding-bottom: 2rem;
     text-shadow: var(--text-shadow);
@@ -503,14 +514,16 @@ section {
 .obat .box-container .box .image{
     position: relative;
     text-align: center;
-    padding-top: 2rem;
+    padding: 2rem 2rem 0 2rem;
     overflow:hidden;
+    height: 25rem;
 }
 
 .obat .box-container .box .image img{
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .obat .box-container .box:hover .image img{
