@@ -495,6 +495,11 @@ section {
     padding: 10px 15px;
 }
 
+#searchObat button:hover {
+    background: var(--red);
+    color: var(--white);
+}
+
 .obat .box-container{
     display: flex;
     justify-content: space-around;

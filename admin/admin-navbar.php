@@ -22,14 +22,14 @@ $offer_url = current_url();
                     if($offer_url != 'obat'){
                         echo'
                         <div>
-                        <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
+                        <a href="./obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
                         </div>';
                     }
                     if($_SESSION['tipe_akun'] == 'admin'){
                         if($offer_url != 'apoteker'){
                             echo'
                                 <div>
-                                    <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
+                                    <a href="./apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
                                 </div>';
                         }
                     }

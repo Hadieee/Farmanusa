@@ -25,7 +25,7 @@
 
 <body>
     <?php
-        include 'admin-navbar.php';
+        include './admin-navbar.php';
     ?>
     <script type="text/javascript" src="../js/script.js"></script>
 </body>
