@@ -3,8 +3,8 @@
 
         <div class="box">
             <h3>quick links</h3>
-            <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
-            <a href="#about"> <i class="fas fa-chevron-right"></i> about us</a>
+            <a href="index.php#home"> <i class="fas fa-chevron-right"></i> home </a>
+            <a href="index.php#about"> <i class="fas fa-chevron-right"></i> about us</a>
         </div>
 
         <div class="box">

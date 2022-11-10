@@ -1,5 +1,6 @@
 <?php
     require 'register.php';
+    
 ?>
 
 <div class="popup" id="popup">
