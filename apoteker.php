@@ -43,7 +43,7 @@
         ?>
             <form id="searchObat" action="" method="POST">
                 <input type="text" value="" name="Search" placeholder="Cari Nama Apoteker">
-                <button type="submit" name="Cari"> O </button>
+                <button type="submit" name="Cari"><i class="fas fa-search"></i></button>
             </form>
         <?php
             }

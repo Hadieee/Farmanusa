@@ -55,7 +55,7 @@
                 if($_SESSION['tipe_akun'] == 'admin' || $_SESSION['tipe_akun'] == 'apoteker'){
                 ?>
                     <script>
-                        document.location.href = './admin';
+                        document.location.href = './admin/';
                     </script>";
                 <?php
                 }else{

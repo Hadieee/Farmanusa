@@ -25,8 +25,49 @@
 
 <body>
     <?php
-        include './admin-navbar.php';
+        include 'admin-navbar.php';
     ?>
+    <section class="obat" id="obat">
+    <h1 class="heading"> Selamat Datang, <?php echo $_SESSION['user'] ?></h1>
+    </section>
+    <section class='badan' style="margin: 0; display:flex; flex-wrap:wrap;">
+        <div class="home" id="home">
+            <div class="image" style="display: flex;">
+                <div class="dark" style="display: none;">
+                    <object type="image/svg+xml" data="../image/about-img.svg">
+                        <img src="../image/about-img.svg" />
+                    </object>
+                </div>
+                <div class="light">
+                    <object type="image/svg+xml" data="../image/book-img.svg">
+                        <img src="../image/book-img.svg" />
+                    </object>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Kelola Data Obat</h3>
+                <a href="obat.php" class="btn"> Click Here <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <div class="home" id="home">
+            <div class="image" style="display: flex;">
+                <div class="dark" style="display: none;">
+                    <object type="image/svg+xml" data="../image/about-img.svg">
+                        <img src="../image/about-img.svg" />
+                    </object>
+                </div>
+                <div class="light">
+                    <object type="image/svg+xml" data="../image/book-img.svg">
+                        <img src="../image/book-img.svg" />
+                    </object>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Kelola Data Apoteker</h3>
+                <a href="apoteker.php" class="btn"> Click Here <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+    </section>
     <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>

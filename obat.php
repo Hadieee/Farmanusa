@@ -45,7 +45,7 @@
         ?>
             <form id="searchObat" action="" method="POST">
                 <input type="text" value="" name="Search" placeholder="Cari Nama Obat">
-                <button type="submit" name="Cari"> O </button>
+                <button class="btn" type="submit" name="Cari"><i class="fas fa-search"></i></button>
             </form>
         <?php
             }

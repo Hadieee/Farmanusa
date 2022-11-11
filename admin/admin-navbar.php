@@ -19,17 +19,24 @@ $offer_url = current_url();
         <div class="muka">
             <div class="navbar">
                 <?php 
-                    if($offer_url != 'obat'){
+                    if ($offer_url != 'index'){
                         echo'
-                        <div>
-                        <a href="./obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
+                            <div>
+                                <a href="index.php"><i class="fas fa-home"></i><span> Home </span></a>
+                            </div>';
+                    }
+
+                    if($offer_url != 'obat'){
+                        echo
+                        '<div>
+                        <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
                         </div>';
                     }
                     if($_SESSION['tipe_akun'] == 'admin'){
                         if($offer_url != 'apoteker'){
                             echo'
                                 <div>
-                                    <a href="./apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
+                                    <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
                                 </div>';
                         }
                     }

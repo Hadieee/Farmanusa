@@ -496,9 +496,9 @@ section {
 }
 
 #searchObat button:hover {
-    background: var(--red);
+    background-color: var(--red);
     color: var(--white);
-}
+} 
 
 .obat .box-container{
     display: flex;
