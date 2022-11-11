@@ -31,6 +31,6 @@
 
     </div>
 
-    <div class="credit"> created by <span>Farmanusa's Team Website Development</span> | all rights NOT reserved </div>
+    <div class="credit"> Created By <span>Farmanusa's Team Website Development</span> | All Rights NOT Reserved </div>
 
 </section>

@@ -616,6 +616,20 @@ section {
     padding:2rem;
 }
 
+
+.apoteker .box-container .box .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width:50%;
+    background:var(--pink);
+    color: var(--white);
+}
+
+.apoteker .box-container .box .icons a:hover{
+    background:var(--dark-color);
+}
+
 .apoteker .box-container .box img{
     height: 20rem;
     border:var(--border);
@@ -790,14 +804,6 @@ section {
 
 .footer .credit span{
     color:var(--red);
-}
-
-.fa-moon {
-    color: #f1c40f;
-}
-
-.fa-sun {
-    color: #f39c12;
 }
 
 @media only screen and (max-width: 420px) {

@@ -67,11 +67,9 @@
                     <img src="../image/blog-2.jpg" alt="">
                     <h1><?php echo $staff['username'] ?></h1>
                     <span>expert fharmachist</span>
-                    <div class="share">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-linkedin"></a>
+                    <div class="icons">
+                        <a href=<?php echo "crud-apoteker/update-apoteker.php?id=".$staff["email"]?> class="fas fa-pencil"></a>
+                        <a href=<?php echo "crud-apoteker/hapus-apoteker.php?id=".$staff["email"]?> class="fas fa-trash"></a>
                     </div>
                 </div>
             <?php
@@ -108,29 +106,24 @@
         <form class="login" action="crud-obat/tambah-obat.php" method="post">
             <table align="center">
                 <tr>
-                    <td align="right">Nama Obat</td>
+                    <td align="right">Email</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="text" name="nama" required></td>
+                    <td align="left"><input type="text" name="email" required></td>
                 </tr>
                 <tr>
-                    <td align="right">Jenis Obat</td>
+                    <td align="right">Username</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="text" name="jenis" required></td>
+                    <td align="left"><input type="text" name="username" required></td>
                 </tr>
                 <tr>
-                    <td align="right">Harga Obat</td>
+                    <td align="right">Password</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="number" name="harga" required></td>
+                    <td align="left"><input type="password" name="password" required></td>
                 </tr>
                 <tr>
-                    <td align="right">Stok Obat</td>
+                    <td align="right">Konfirmasi Password</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="number" name="stok" required></td>
-                </tr>
-                <tr>
-                    <td align="right">Deskripsi</td>
-                    <td> <center>:</center></td>
-                    <td align="left"><input type="text" name="deskripsi"></td>
+                    <td align="left"><input type="password" name="password_konf" required></td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3" style="padding-top: 10px;">

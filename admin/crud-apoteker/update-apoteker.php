@@ -1,25 +1,23 @@
 <?php
     require "../../db-connect.php";
     $id = $_GET['id'];
-    $hasil = mysqli_query($db, "SELECT * FROM obat WHERE id_obat = '$id'");
-    $obat = mysqli_fetch_assoc($hasil);
+    $hasil = mysqli_query($db, "SELECT * FROM user WHERE email = '$id'");
+    $staff = mysqli_fetch_assoc($hasil);
 
     if(isset($_POST['submit'])){
-        $nama = $_POST['nama'];
-        $jenis = $_POST['jenis'];
-        $harga = $_POST['harga'];
-        $stok = $_POST['stok'];
-        $deskripsi  = $_POST['deskripsi'];
-        $hasil = mysqli_query($db, "UPDATE obat SET nama_obat = '$nama', 
-                                                    tipe_obat = '$jenis', 
-                                                    harga_obat = '$harga', 
-                                                    stok_obat = '$stok', 
-                                                    deskripsi = '$deskripsi' 
-                                                    WHERE id_obat = '$id'"); 
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $password = $_POST['pasword'];
+        $password_konf = $_POST['password_konf'];
+        $hasil = mysqli_query($db, "UPDATE user SET email = '$email', 
+                                                    username = '$username', 
+                                                    'password' = '$password',
+                                                    tipe_akun = 'apoteker',  
+                                                    WHERE email = '$id'"); 
         if($hasil){
             echo"<script> 
                 alert('berhasil update');
-                document.location.href = '../obat.php';
+                document.location.href = '../apoteker.php';
             </script>";
         }
     }
@@ -45,34 +43,29 @@
         <form class="login" action="" method="post">
             <table align="center">
                 <tr>
-                    <td align="right">Nama Obat</td>
+                    <td align="right">Email</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="text" name="nama" value="<?php echo $obat['nama_obat']; ?>" required></input></td>
+                    <td align="left"><input type="text" name="email" value="<?php echo $staff['email']; ?>" required></input></td>
                 </tr>
                 <tr>
-                    <td align="right">Jenis Obat</td>
+                    <td align="right">Username</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="text" name="jenis" value="<?php echo $obat['tipe_obat']; ?>" required></input></td>
+                    <td align="left"><input type="text" name="username" value="<?php echo $staff['username']; ?>" required></input></td>
                 </tr>
                 <tr>
-                    <td align="right">Harga Obat</td>
+                    <td align="right">Password</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="number" name="harga" value="<?php echo $obat['harga_obat']; ?>" required></input></td>
+                    <td align="left"><input type="password" name="password" required></input></td>
                 </tr>
                 <tr>
-                    <td align="right">Stok Obat</td>
+                    <td align="right">Konfirmasi Password</td>
                     <td> <center>:</center></td>
-                    <td align="left"><input type="number" name="stok" value="<?php echo $obat['stok_obat']; ?>" required></input></td>
-                </tr>
-                <tr>
-                    <td align="right">Deskripsi</td>
-                    <td> <center>:</center></td>
-                    <td align="left"><input type="text" name="deskripsi" value="<?php echo $obat['deskripsi']; ?>"></input></td>
-                </tr>
+                    <td align="left"><input type="password" name="password_konf" required></input></td>
+                </tr>   
                 <tr>
                     <td align="center" colspan="3" style="padding-top: 10px;">
                             <button type="submit" name="submit" class="btn"> Perbarui </button>
-                            <a class="btn" href="../obat.php"> Batalkan </a>
+                            <a class="btn" href="../apoteker.php"> Batalkan </a>
                     </td>
                 </tr>
             </table>

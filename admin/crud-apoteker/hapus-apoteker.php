@@ -1,7 +1,6 @@
 <?php
-    require('../../db-connect.php');
-    $email = $_GET['email'];
-    $username = $_GET['username'];
-    $db->query("DELETE FROM user WHERE email = $id OR username = $username");
+    require '../../db-connect.php';
+    $id = $_GET['id'];
+    $db->query("DELETE FROM user WHERE email = $id");
     header('Location: ../apoteker.php');
 ?>
