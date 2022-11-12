@@ -54,7 +54,7 @@ session_start();
 
     <section class="about" id="about">
 
-        <h1 class="heading"> <span>about</span> us </h1>
+        <h1 class="heading"> about us </h1>
 
         <div class="row">
 
