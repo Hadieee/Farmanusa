@@ -714,24 +714,14 @@ section {
     box-shadow: var(--box-shadow);
 }
 
-<<<<<<< Updated upstream
-
-
-.apoteker .box-container{
-=======
 .keranjang .box-container{
->>>>>>> Stashed changes
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap:1.5rem;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box{
-=======
 .keranjang .box-container .box{
->>>>>>> Stashed changes
     max-width: 300px;
     flex:1 1 30rem;
     box-shadow: var(--box-shadow);
@@ -740,11 +730,7 @@ section {
     position: relative;    
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .stok{
-=======
 .keranjang .box-container .box input{
->>>>>>> Stashed changes
     position: absolute;
     top:1rem; left:1rem;
     padding:.7rem 1rem;
@@ -756,11 +742,7 @@ section {
     border-radius: 1rem;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .image{
-=======
 .keranjang .box-container .box .image{
->>>>>>> Stashed changes
     position: relative;
     text-align: center;
     padding: 2rem 2rem 0 2rem;
@@ -768,48 +750,28 @@ section {
     height: 25rem;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .image img{
-=======
 .keranjang .box-container .box .image img{
->>>>>>> Stashed changes
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box:hover .image img{
-    transform: scale(1.1);
-}
-
-.apoteker .box-container .box .image .icons{
-=======
 .keranjang .box-container .box:hover .image img{
     transform: scale(1.1);
 }
 
 .keranjang .box-container .box .image .icons{
->>>>>>> Stashed changes
     position: absolute;
     bottom:-7rem; left:0; right:0;
     display: flex;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box:hover .image .icons{
-    bottom:0;
-}
-
-.apoteker .box-container .box .image .icons a{
-=======
 .keranjang .box-container .box:hover .image .icons{
     bottom:0;
 }
 
 .keranjang .box-container .box .image .icons a{
->>>>>>> Stashed changes
     height: 5rem;
     line-height: 5rem;
     font-size: 2rem;
@@ -818,72 +780,40 @@ section {
     color: var(--white);
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .image .icons .cart-btn{
-=======
 .keranjang .box-container .box .image .icons .cart-btn{
->>>>>>> Stashed changes
     border-left: .1rem solid var(--red);
     border-right: .1rem solid var(--box-shadow);
     width:100%;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .image .icons a:hover{
-    background:var(--dark-color);
-}
-
-.apoteker .box-container .box .content{
-=======
 .keranjang .box-container .box .image .icons a:hover{
     background:var(--dark-color);
 }
 
 .keranjang .box-container .box .content{
->>>>>>> Stashed changes
     padding:2rem;
     text-align: center;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .content h3{
-=======
 .keranjang .box-container .box .content h3{
->>>>>>> Stashed changes
     font-size: 2.5rem;
     color:var(--dark-color);
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .content .price{
-=======
 .keranjang .box-container .box .content .price{
->>>>>>> Stashed changes
     font-size: 2.5rem;
     color:var(--pink);
     font-weight: bolder;
     padding-top: 1rem;
 }
 
-<<<<<<< Updated upstream
-.apoteker .box-container .box .content .price span{
-=======
 .keranjang .box-container .box .content .price span{
->>>>>>> Stashed changes
     font-size: 1.5rem;
     color:var(--pink);
     font-weight: lighter;
     text-decoration: line-through;
 }
 
-<<<<<<< Updated upstream
-
-
-
-
-
-
-=======
 .keranjang .box-container .totalHarga{
     bottom: 20%;
     right: 10%;
@@ -911,7 +841,6 @@ section {
     background-color: var(--white);
     color: var(--red)
 }
->>>>>>> Stashed changes
 
 .about{
     margin-bottom: 75px;
