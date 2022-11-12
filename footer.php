@@ -19,14 +19,14 @@
             <h3>contact info</h3>
             <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
             <a href="#"> <i class="fas fa-envelope"></i> farmanusa@gmail.com </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Samarinda, indonesia - 141122 </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Samarinda, Indonesia - 141122 </a>
         </div>
 
         <div class="box">
             <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
         </div>
 
     </div>

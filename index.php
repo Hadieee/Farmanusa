@@ -64,11 +64,12 @@ session_start();
 
             <div class="content">
                 <h3>We Take Care of Your Healthy Life</h3>
-                <p>APOTEK Farmanusa merupakan perusahaan Ritel Farmasi pertama dengan Reputasi Nasional melalui :</p>
+                <p>APOTEK Farmanusa merupakan perusahaan Ritel Farmasi pertama dengan reputasi nasional melalui :</p>
                 <p>Pengembangan brand dan image yang bertujuan untuk memberikan jaminan kepada pasien atau masyarakat terhadap kualitas,
-                    Ketelitian pembacaan resep maupun peracikan obat, Kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien. Pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, Keramahan seluruh karyawan apotek dalam melayani pasien,
-                    Kejujuran serta kesahajaan dari pelayanan pelanggan sebagai suatu nilai tambah penting terhadap produk obat-obatan yang ditawarkan oleh apotek.
-                    Pembenahan secara terus-menerus dipastikan dilakukan pada seluruh cabang Apotek Farmanusa .</p>
+                    ketelitian pembacaan resep maupun peracikan obat, kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien.
+                    pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, keramahan seluruh karyawan apotek dalam melayani pasien,
+                    kejujuran serta kesahajaan dari pelayanan pelanggan sebagai suatu nilai tambah penting terhadap produk obat-obatan yang ditawarkan oleh apotek.
+                    pembenahan secara terus-menerus dipastikan dilakukan pada seluruh cabang Apotek Farmanusa .</p>
             </div>
 
         </div>
