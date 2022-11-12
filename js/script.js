@@ -69,8 +69,8 @@ if(img_dark && img_light){
     }
 }
 
-function inconstruct(){
-    alert(" Bagian ini masih dalam pengembangan.");
+function cart_add(){
+    return alert(" Obat berhasil ditambahkan ke Keranjang.");
 }
 
 function loggingPop(){
@@ -82,4 +82,42 @@ function loggingPop(){
         document.getElementById('popup').style.display = 'none';
         document.getElementById('popup2').style.display = 'flex';
     }
+}
+
+function imposeMinMax(el){
+    if(el.value != ""){
+      if(parseInt(el.value) < parseInt(el.min)){
+        el.value = el.min;
+      }
+      if(parseInt(el.value) > parseInt(el.max)){
+        el.value = el.max;
+      }
+    }
+}
+
+function totalHarga(el, harga, jalur){
+    var change = document.getElementsByClassName('value');
+    if (jalur == "+"){
+        var harga_total = parseInt(change[0].innerHTML) + el.value * parseInt(harga);
+    }
+    else{
+        var harga_total = parseInt(change[0].innerHTML) - el.value * parseInt(harga);
+    }
+
+    if(harga_total <= 0){
+        harga_total = 0;
+    }
+
+    change[0].innerHTML = harga_total;
+}
+
+function keyPressed(e)
+{
+     var key;      
+     if(window.event)
+          key = window.event.keyCode; //IE
+     else
+          key = e.which; //firefox      
+
+     return (key != 13);
 }

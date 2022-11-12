@@ -42,7 +42,7 @@ $offer_url = current_url();
                     if($offer_url != 'keranjang'){
                         echo'
                             <div>
-                                <a href="" onclick=inconstruct()><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
+                                <a href="keranjang.php"><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
                             </div>';
                     }
                 ?>
