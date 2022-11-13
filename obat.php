@@ -13,7 +13,7 @@
         }
 
         if(!isset($checkSlot)){
-            $query = "INSERT INTO orderan VALUES (default, '$username', ".date("Y-m-d").", 0)" ;
+            $query = "INSERT INTO orderan VALUES (default, '$username', ".date("Y-m-d").", 0, 'Sedang Diorder')" ;
             $result = $db->query($query);
         }
     }
