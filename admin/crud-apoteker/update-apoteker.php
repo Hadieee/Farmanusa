@@ -7,12 +7,12 @@
     if(isset($_POST['submit'])){
         $email = $_POST['email'];
         $username = $_POST['username'];
-        $password = $_POST['pasword'];
+        $password = $_POST['password'];
         $password_konf = $_POST['password_konf'];
         $hasil = mysqli_query($db, "UPDATE user SET email = '$email', 
                                                     username = '$username', 
-                                                    'password' = '$password',
-                                                    tipe_akun = 'apoteker',  
+                                                    password = '$password',
+                                                    tipe_akun = 'apoteker'  
                                                     WHERE email = '$id'"); 
         if($hasil){
             echo"<script> 

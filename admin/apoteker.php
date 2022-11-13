@@ -75,22 +75,6 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <span>expert fharmachist</span>
                         </div>
                     </div>
-
-                    <!-- <div class="box">
-                <div class="image">
-                    <img src="../image/obat-1.jpg" alt="">
-                    <div class="icons">
-                        <a href=<?php echo "crud-obat/update-obat.php?id=" . $obt["id_obat"] ?> class="fas fa-pencil"></a>
-                        <a href=<?php echo "crud-obat/hapus-obat.php?id=" . $obt["id_obat"] ?> class="fas fa-trash"></a>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3><?php echo $obt['nama_obat']; ?></h3>
-                    <div class="price">Rp.<?php echo $obt['harga_obat']; ?></div>
-                </div> -->
-
-
-
                 <?php
                 endforeach;
             } else {
