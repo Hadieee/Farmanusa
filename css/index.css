@@ -495,6 +495,11 @@ section {
     padding: 10px 15px;
 }
 
+#searchObat button:hover {
+    background-color: var(--red);
+    color: var(--white);
+} 
+
 .obat .box-container{
     display: flex;
     justify-content: space-around;
@@ -611,11 +616,65 @@ section {
     padding:2rem;
 }
 
+.apoteker .box-container .box .content{
+    padding:2rem;
+    text-align: center;
+}
+
+.apoteker .box-container .box .content h3{
+    font-size: 2.5rem;
+    color:var(--dark-color);
+}
+
+.apoteker .box-container .box .content .price{
+    font-size: 2.5rem;
+    color:var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.apoteker .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color:var(--pink);
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.apoteker .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+    overflow:hidden;
+    height: 25rem;
+}
+
+.apoteker .box-container .box .image .icons{
+    position: absolute;
+    bottom:-7rem; left:0; right:0;
+    display: flex;
+}
+
+.apoteker .box-container .box:hover .image .icons{
+    bottom:0;
+}
+
+.apoteker .box-container .box .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width:50%;
+    background:var(--pink);
+    color: var(--white);
+}
+
+.apoteker .box-container .box .icons a:hover{
+    background:var(--dark-color);
+}
+
 .apoteker .box-container .box img{
-    height: 20rem;
+    height: 17rem;
     border:var(--border);
-    border-radius: .5rem;
-    margin-top: 1rem;
+    border-radius: .5rem;   
     margin-bottom: 1rem;
 }
 
@@ -643,7 +702,7 @@ section {
     width: 5rem;
     line-height: 4.5rem;
     font-size: 2rem;
-    color:var(--pink);
+    color:var(--red);
     border-radius: .5rem;
     border:var(--border);
     margin:.3rem;
@@ -651,8 +710,136 @@ section {
 
 .apoteker .box-container .box .share a:hover{
     background:var(--pink);
-    color:var(--red);
+    color:var(--white);
     box-shadow: var(--box-shadow);
+}
+
+.keranjang .box-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.keranjang .box-container .box{
+    max-width: 300px;
+    flex:1 1 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    border:.05rem solid var(--pink);
+    position: relative;    
+}
+
+.keranjang .box-container .box input{
+    position: absolute;
+    top:1rem; left:1rem;
+    padding:.7rem 1rem;
+    font-size: 2rem;
+    color:var(--white);
+    background:var(--red);
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+    border-radius: 1rem;
+}
+
+.keranjang .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+    overflow:hidden;
+    height: 25rem;
+}
+
+.keranjang .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.keranjang .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.keranjang .box-container .box .image .icons{
+    position: absolute;
+    bottom:-7rem; left:0; right:0;
+    display: flex;
+}
+
+.keranjang .box-container .box:hover .image .icons{
+    bottom:0;
+}
+
+.keranjang .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width:50%;
+    background:var(--pink);
+    color: var(--white);
+}
+
+.keranjang .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid var(--red);
+    border-right: .1rem solid var(--box-shadow);
+    width:100%;
+}
+
+.keranjang .box-container .box .image .icons a:hover{
+    background:var(--dark-color);
+}
+
+.keranjang .box-container .box .content{
+    padding:2rem;
+    text-align: center;
+}
+
+.keranjang .box-container .box .content h3{
+    font-size: 2.5rem;
+    color:var(--dark-color);
+}
+
+.keranjang .box-container .box .content .price{
+    font-size: 2.5rem;
+    color:var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.keranjang .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color:var(--pink);
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.keranjang .box-container .totalHarga{
+    bottom: 20%;
+    right: 10%;
+    font-size: xx-large;
+    max-width: 300px;
+    flex:1 1 30rem;
+    padding: 10px;
+    background-color: var(--dark-color);
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    border:.05rem solid var(--pink);
+    position: fixed;
+    z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .keranjang .box-container .totalHarga{
+        font-size: medium;
+    }
+}
+
+.value{
+    text-align: center;
+    background-color: var(--white);
+    color: var(--red)
 }
 
 .about{
@@ -785,14 +972,6 @@ section {
 
 .footer .credit span{
     color:var(--red);
-}
-
-.fa-moon {
-    color: #f1c40f;
-}
-
-.fa-sun {
-    color: #f39c12;
 }
 
 @media only screen and (max-width: 420px) {

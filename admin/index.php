@@ -1,10 +1,10 @@
 <?php
     session_start();
-    if(isset($_SESSION['tipe_akun'])){
+    if(isset($_SESSION['tipe_akun']) or !isset($_SESSION['tipe_akun'])){
         if($_SESSION['tipe_akun'] != 'admin' && $_SESSION['tipe_akun'] != 'apoteker'){
             echo "<script>
                 alert('Kamu Bukan Admin/Apoteker Woi');
-                document.location.href = '../';
+                document.location.href = '../index.php';
             </script>";
         }
     }
@@ -27,6 +27,47 @@
     <?php
         include 'admin-navbar.php';
     ?>
+    <section class="obat" id="obat">
+    <h1 class="heading"> Selamat Datang, <?php echo $_SESSION['user'] ?></h1>
+    </section>
+    <section class='badan' style="margin: 0; display:contents;">
+        <div class="home" id="home">
+            <div class="image" style="display: flex;">
+                <div class="dark" style="display: none;">
+                    <object type="image/svg+xml" data="../image/about-img.svg">
+                        <img src="../image/about-img.svg" />
+                    </object>
+                </div>
+                <div class="light">
+                    <object type="image/svg+xml" data="../image/book-img.svg">
+                        <img src="../image/book-img.svg" />
+                    </object>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Kelola Data Obat</h3>
+                <a href="obat.php" class="btn"> Click Here <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+        <div class="home" id="home">
+            <div class="image" style="display: flex;">
+                <div class="dark" style="display: none;">
+                    <object type="image/svg+xml" data="../image/about-img.svg">
+                        <img src="../image/about-img.svg" />
+                    </object>
+                </div>
+                <div class="light">
+                    <object type="image/svg+xml" data="../image/book-img.svg">
+                        <img src="../image/book-img.svg" />
+                    </object>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Kelola Data Apoteker</h3>
+                <a href="apoteker.php" class="btn"> Click Here <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+    </section>
     <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>

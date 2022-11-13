@@ -1,9 +1,23 @@
 <?php
     session_start();
+    require('db-connect.php');
+
     if(!isset($_SESSION['user'])){
         echo"<script>alert('Login Dulu Ya Dek');document.location.href = 'index.php';</script>";
+    }else{
+        $username = $_SESSION['user'];
+        $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username'");
+
+        while($row = mysqli_fetch_assoc($check)){
+            $checkSlot[] = $row;
+        }
+
+        if(!isset($checkSlot)){
+            $query = "INSERT INTO orderan VALUES (default, '$username', ".date("Y-m-d").", 0)" ;
+            $result = $db->query($query);
+        }
     }
-    require('db-connect.php');
+    
     if(!isset($_POST['Cari'])){
         $result = mysqli_query($db, "SELECT * FROM obat WHERE stok_obat > 0");
     }
@@ -14,6 +28,8 @@
     while($row = mysqli_fetch_assoc($result)){
         $obat[] = $row;
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +61,7 @@
         ?>
             <form id="searchObat" action="" method="POST">
                 <input type="text" value="" name="Search" placeholder="Cari Nama Obat">
-                <button type="submit" name="Cari"> O </button>
+                <button class="btn" type="submit" name="Cari"><i class="fas fa-search"></i></button>
             </form>
         <?php
             }
@@ -60,7 +76,7 @@
                 <div class="image">
                     <img src="image/obat-1.jpg" alt="">
                     <div class="icons">
-                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="cart-btn" onclick="cart_add()">add to cart</a>
                     </div>
                 </div>
                 <div class="content">

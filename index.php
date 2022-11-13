@@ -54,7 +54,7 @@ session_start();
 
     <section class="about" id="about">
 
-        <h1 class="heading"> <span>about</span> us </h1>
+        <h1 class="heading"> about us </h1>
 
         <div class="row">
 
@@ -64,11 +64,12 @@ session_start();
 
             <div class="content">
                 <h3>We Take Care of Your Healthy Life</h3>
-                <p>APOTEK Farmanusa merupakan perusahaan Ritel Farmasi pertama dengan Reputasi Nasional melalui :</p>
+                <p>APOTEK Farmanusa merupakan perusahaan Ritel Farmasi pertama dengan reputasi nasional melalui :</p>
                 <p>Pengembangan brand dan image yang bertujuan untuk memberikan jaminan kepada pasien atau masyarakat terhadap kualitas,
-                    Ketelitian pembacaan resep maupun peracikan obat, Kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien. Pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, Keramahan seluruh karyawan apotek dalam melayani pasien,
-                    Kejujuran serta kesahajaan dari pelayanan pelanggan sebagai suatu nilai tambah penting terhadap produk obat-obatan yang ditawarkan oleh apotek.
-                    Pembenahan secara terus-menerus dipastikan dilakukan pada seluruh cabang Apotek Farmanusa .</p>
+                    ketelitian pembacaan resep maupun peracikan obat, kecepatan dalam pelayanan serta penambahan manfaat baru terhadap arti kesembuhan dan kesehatan bagi pasien.
+                    pengembangan konsep dan strategi marketing yang diketengahkan adalah dengan memberikan penawaran harga produk yang kompetitif, keramahan seluruh karyawan apotek dalam melayani pasien,
+                    kejujuran serta kesahajaan dari pelayanan pelanggan sebagai suatu nilai tambah penting terhadap produk obat-obatan yang ditawarkan oleh apotek.
+                    pembenahan secara terus-menerus dipastikan dilakukan pada seluruh cabang Apotek Farmanusa .</p>
             </div>
 
         </div>
@@ -78,44 +79,6 @@ session_start();
     <!-- about section ends -->
 
     <!-- footer section starts  -->
-
-    <!-- <section class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>quick links</h3>
-                <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
-                <a href="#about"> <i class="fas fa-chevron-right"></i> about us</a>
-            </div>
-
-            <div class="box">
-                <h3>our services</h3>
-                <a href="obat.php"> <i class="fas fa-chevron-right"></i> obat </a>
-                <a href="apoteker.php"> <i class="fas fa-chevron-right"></i> apoteker </a>
-                <a href=""> <i class="fas fa-chevron-right"></i> keranjang </a>
-                <a onclick="document.getElementById('popup').style.display = 'block';"> <i class="fas fa-chevron-right"></i> login </a>
-            </div>
-
-            <div class="box">
-                <h3>contact info</h3>
-                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-                <a href="#"> <i class="fas fa-envelope"></i> farmanusa@gmail.com </a>
-                <a href="#"> <i class="fas fa-map-marker-alt"></i> Samarinda, indonesia - 141122 </a>
-            </div>
-
-            <div class="box">
-                <h3>follow us</h3>
-                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            </div>
-
-        </div>
-
-        <div class="credit"> created by <span>Farmanusa's Team Website Development</span> | all rights NOT reserved </div>
-
-    </section> -->
 
     <?php include 'footer.php' ?>
 

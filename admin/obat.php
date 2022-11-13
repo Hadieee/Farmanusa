@@ -46,13 +46,13 @@
 
         <h1 class="heading">Data Obat</h1>
         <?php 
-            if(isset($obat) or isset($_POST['Cari'])){
+            if(isset($obat) or isset($_POST['Cari']) or !isset($obat)){
         ?>
             <div style="display: flex; flex-direction:row; justify-content:space-around; align-items:center; flex-wrap: wrap;  ">
                 <button class="btn" style="padding:11.2px; margin-top: 0; display:flex; align-items:center;" onclick="document.querySelector('.popup').style.display = 'block'">+ Tambah Obat</button>
                 <form id="searchObat" action="" method="POST">
                     <input type="text" value="" name="Search" placeholder="Cari Nama Obat">
-                    <button class="btn" type="submit" name="Cari"> O </button>
+                    <button class="btn" type="submit" name="Cari"><i class="fas fa-search"></i></button>
                 </form>
             </div>
         <?php

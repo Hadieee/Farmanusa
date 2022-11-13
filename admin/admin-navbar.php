@@ -19,9 +19,16 @@ $offer_url = current_url();
         <div class="muka">
             <div class="navbar">
                 <?php 
-                    if($offer_url != 'obat'){
+                    if ($offer_url != 'index'){
                         echo'
-                        <div>
+                            <div>
+                                <a href="index.php"><i class="fas fa-home"></i><span> Home </span></a>
+                            </div>';
+                    }
+
+                    if($offer_url != 'obat'){
+                        echo
+                        '<div>
                         <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
                         </div>';
                     }
@@ -36,15 +43,26 @@ $offer_url = current_url();
                 ?>
                 
             </div>
-            <?php
-            if(isset($_SESSION['user'])){
-                echo "
-                    <div class='user'>
-                        <a href='../logout.php'><i class='fas fa-user'></i><span>Logout</span></a>
-                    </div>";
-            }
-            ?>
-            
+            <?php 
+                    if(isset($_SESSION['user'])){
+                ?>
+                <div class="user">
+                    <a href="index.php"><i class="fas fa-user"></i><span><?php echo $_SESSION['user']; ?></span></a>
+                    <a class="btn" href="../logout.php">Logout</a>
+                </div>
+                <?php
+                    }else{
+                ?>
+                <div class="user">
+                    <a onclick="loggingPop();
+                                document.querySelector('.kepala').classList.toggle('active');
+                                document.querySelector('#menu-btn').style.left = '50px';
+                                document.querySelector('#menu-btn').classList.toggle('fa-times');">
+                    <i class="fas fa-user"></i><span>Login</span></a>
+                </div>
+                <?php
+                    }
+                ?>   
         </div>
         <div><i id="menu-btn" class="fas fa-bars"></i></div>
         <div class="dark_mode">
