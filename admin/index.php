@@ -7,12 +7,6 @@
                 document.location.href = '../index.php';
             </script>";
         }
-        else if($_SESSION['tipe_akun'] = ''){
-            echo "<script>
-                alert('Kamu Bukan Admin/Apoteker Woi');
-                document.location.href = '../index.php';
-            </script>";
-        }
     }
 ?>
 
