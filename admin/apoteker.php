@@ -1,12 +1,18 @@
 <?php
 require('../db-connect.php');
 session_start();
-if (isset($_SESSION['tipe_akun'])) {
+if (isset($_SESSION['tipe_akun']) or !isset($_SESSION['tipe_akun'])) {
     if ($_SESSION['tipe_akun'] != 'admin') {
         echo "<script>
                 alert('Kamu Bukan Admin Woi');
-                document.location.href = '../';
+                document.location.href = 'index.php';
             </script>";
+    }
+    else if ($_SESSION['tipe_akun'] = '') {
+        echo "<script>
+                alert('Kamu Bukan Admin Woi');
+                document.location.href = 'index.php';
+            </script>";        
     }
 }
 if (!isset($_POST['Cari'])) {
