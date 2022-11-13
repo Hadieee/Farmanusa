@@ -710,7 +710,7 @@ section {
 
 .apoteker .box-container .box .share a:hover{
     background:var(--pink);
-    color:var(--red);
+    color:var(--white);
     box-shadow: var(--box-shadow);
 }
 
