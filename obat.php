@@ -6,7 +6,7 @@
         echo"<script>alert('Login Dulu Ya Dek');document.location.href = 'index.php';</script>";
     }else{
         $username = $_SESSION['user'];
-        $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username'");
+        $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username' and status = 'Sedang Diorder'");
 
         while($row = mysqli_fetch_assoc($check)){
             $checkSlot[] = $row;
@@ -76,7 +76,26 @@
                 <div class="image">
                     <img src="image/obat-1.jpg" alt="">
                     <div class="icons">
-                        <a href="#" class="cart-btn" onclick="cart_add()">add to cart</a>
+                        <?php
+                        $id_obat = $obt['id_obat'];
+                        $ObatDiKeranjang = "SELECT * FROM orderan JOIN obat_diorder where username = '$username'
+                                            and status = 'Sedang Diorder' and id_obat = $id_obat";
+                        $qA = $db->query($ObatDiKeranjang);
+                        while($rowA = mysqli_fetch_assoc($qA)){
+                            $rowCheck[] = $rowA;
+                        }
+
+                        if (isset($rowCheck)){?>
+                            <a href="#" class="cart-btn">Sudah di keranjang</a>
+                        <?php
+                            unset($rowCheck);
+                        } else{
+                        ?>
+                            <a href=<?php echo "add-to-cart.php?id=".$obt["id_obat"]?>
+                            class="cart-btn" onclick="cart_add()">Add to Cart</a>
+                        <?php 
+                        } ?>
+
                     </div>
                 </div>
                 <div class="content">

@@ -8,11 +8,12 @@
 
     if(!isset($_POST['Cari'])){
         $result = mysqli_query($db, "SELECT * FROM orderan o JOIN obat_diorder d ON (d.id_order = o.id_order)
-                                     JOIN obat b on (d.id_obat = b.id_obat) WHERE username = '$username'");
+                                     JOIN obat b on (d.id_obat = b.id_obat) WHERE username = '$username' and status = 'Sedang Diorder'");
     }
     else{
         $cari = $_POST['Search'];
-        $result = mysqli_query($db, "SELECT * FROM obat_diorder LEFT JOIN orderan USING id_order WHERE username = $username LIKE'%$cari%'");
+        $result = mysqli_query($db, "SELECT * FROM obat_diorder LEFT JOIN orderan USING id_order
+                                     WHERE status = 'Sedang Diorder' and username = $username LIKE'%$cari%'");
     }
     while($row = mysqli_fetch_assoc($result)){
         $order[] = $row;
@@ -64,12 +65,14 @@
                 foreach($order as $ord):
         ?>
             <div class="box">
-                <span class="stok"><input type="number"
+                <span class="stok" method="post"><input type="number"
                                     onkeydown="totalHarga(this, <?php echo $ord['harga_obat']; ?>, '-')"
                                     onkeyup="imposeMinMax(this), totalHarga(this, <?php echo $ord['harga_obat']; ?>, '+')"
                                     min="0" max="<?php echo $ord['stok_obat']; ?>"
                                     maxlength="3";
-                                    value="0"> </span>
+                                    value="0" name='<?php echo $ord['nama_obat']?>'>
+                        <div> Pesan Sekarang </div>                
+                </span>
                 <div class="image">
                     <img src="image/obat-1.jpg" alt="">
                 </div>
