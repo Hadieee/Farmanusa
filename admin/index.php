@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    if(isset($_SESSION['tipe_akun'])){
+        if($_SESSION['tipe_akun'] != 'admin' && $_SESSION['tipe_akun'] != 'apoteker'){
+            echo "<script>
+                alert('Kamu Bukan Admin/Apoteker Woi');
+                document.location.href = '../';
+            </script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

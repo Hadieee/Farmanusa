@@ -21,28 +21,26 @@ $offer_url = current_url();
                 <?php 
                     if($offer_url != 'obat'){
                         echo'
-                            <div>
-                                <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
-                            </div>';
+                        <div>
+                        <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
+                        </div>';
                     }
-    
-                    if($offer_url != 'apoteker'){
-                        echo'
-                            <div>
-                                <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
-                            </div>';
+                    if($_SESSION['tipe_akun'] == 'admin'){
+                        if($offer_url != 'apoteker'){
+                            echo'
+                                <div>
+                                    <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
+                                </div>';
+                        }
                     }
                 ?>
                 
             </div>
-            <div class="user">
-                <a><i class="fas fa-user"></i><span>Admin</span></a>
-            </div>
             <?php
             if(isset($_SESSION['user'])){
                 echo "
-                    <div class='Logout'>
-                        <a><i class='fas fa-user'></i><span>Admin</span></a>
+                    <div class='user'>
+                        <a href='../logout.php'><i class='fas fa-user'></i><span>Logout</span></a>
                     </div>";
             }
             ?>

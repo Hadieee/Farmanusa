@@ -2,14 +2,16 @@ let menu = document.querySelector('#menu-btn');
 let tempat = document.querySelector('.tempat');
 let kepala = document.querySelector('.kepala');
 
-menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    if(menu.style.left == "310px"){
-        menu.style.left = "50px";
-    }else{
-        menu.style.left = "310px"; 
+if(menu){
+    menu.onclick = () =>{
+        menu.classList.toggle('fa-times');
+        if(menu.style.left == "310px"){
+            menu.style.left = "50px";
+        }else{
+            menu.style.left = "310px"; 
+        }
+        kepala.classList.toggle("active");
     }
-    kepala.classList.toggle("active");
 }
 
 var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -53,7 +55,7 @@ if(img_dark && img_light){
         document.documentElement.setAttribute('data-theme', targetTheme);
         localStorage.setItem('theme', targetTheme);
     }
-}else{
+}else if(toggle){
     toggle.onclick = function(){
         var currentTheme = document.documentElement.getAttribute('data-theme');
         var targetTheme = "light";

@@ -12,7 +12,6 @@
     text-decoration: none;
 }
 
-
 html[data-theme='light'] {
     --red: #e44738;
     --white: white;
@@ -78,13 +77,15 @@ section {
 }
 
 .popup .login table input{
+    padding: 5px;
+    border-radius: 5px;
     width: 100%;
-    font-size: x-large;
     border: 1px solid var(--dark-color);
 }
-
+.popup .login table tr{
+    height: 50px;
+}
 .popup .login table{
-    font-size: x-large;
     background-color: var(--white);
     padding: 50px;
     border: 1px solid var(--dark-color);
@@ -92,6 +93,7 @@ section {
 }
 
 .popup .login {
+    font-size: medium;
     display: flex;
     margin: auto;
     justify-content: space-around;
@@ -111,17 +113,24 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.inLoginButton :link, .inLoginButton :visited{
+
+
+.inLoginButton{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
     color: black;
     padding: 5px;
     font-size: medium;
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: white;
     box-shadow: var(--box-shadow);
     border: 2px solid var(--dark-color);
 }
 
-.inLoginButton :hover{
+.inLoginButton:hover{
     background-color: rgb(176, 176, 176);
     color: #041C32;
 }
@@ -326,6 +335,8 @@ section {
 }
 
 .kepala .user {
+    display: flex;
+    flex-direction: column;
     font-size: 2rem;
     padding: 30px;
     display: flex;
@@ -500,7 +511,7 @@ section {
     position: relative;    
 }
 
-.obat .box-container .box .discount{
+.obat .box-container .box .stok{
     position: absolute;
     top:1rem; left:1rem;
     padding:.7rem 1rem;
@@ -509,7 +520,7 @@ section {
     background:var(--red);
     box-shadow: var(--box-shadow);
     z-index: 1;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 
 .obat .box-container .box .image{
@@ -585,12 +596,14 @@ section {
 }
 
 .apoteker .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:1.5rem;
 }
 
 .apoteker .box-container .box{
+    max-width: 340px;
     text-align: center;
     border-radius: .5rem;
     border:var(--border);
