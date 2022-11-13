@@ -54,6 +54,7 @@
         <?php
             }
         ?>
+        
         <div class="box-container">
         <?php   
             if(isset($order)){
@@ -71,8 +72,8 @@
                                     min="0" max="<?php echo $ord['stok_obat']; ?>"
                                     maxlength="3";
                                     value="0" name='<?php echo $ord['nama_obat']?>'>
-                        <div> Pesan Sekarang </div>                
-                </span>
+                                </span>
+               
                 <div class="image">
                     <img src="image/obat-1.jpg" alt="">
                 </div>
@@ -108,7 +109,9 @@
             }
         ?>
         </div>
+        <button class="btn"> Pesan Sekarang </button> 
     </section>
+
 
     <?php include 'footer.php' ?>
 

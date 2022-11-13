@@ -746,6 +746,8 @@ section {
     border-radius: 1rem;
 }
 
+
+
 .keranjang .box-container .box .image{
     position: relative;
     text-align: center;
@@ -833,6 +835,8 @@ section {
     position: fixed;
     z-index: 1;
 }
+
+
 
 @media screen and (max-width: 600px) {
     .keranjang .box-container .totalHarga{
