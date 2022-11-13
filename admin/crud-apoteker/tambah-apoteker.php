@@ -46,10 +46,9 @@
         $password = password_hash($password, PASSWORD_DEFAULT);
         $query = "INSERT INTO user VALUES ('$email', '$username', '$password', 'apoteker')";
         $result = $db->query($query);
-        unset($_POST['register']);
         ?>
         <script type="text/javascript">
-            alert(" Registrasi Berhasil ");
+            alert(" Tambah Apoteker Berhasil ");
             document.location.href = '../apoteker.php';
         </script>
         <?php

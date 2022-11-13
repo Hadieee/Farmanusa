@@ -3,6 +3,7 @@
     $id = $_GET['id'];
     $hasil = mysqli_query($db, "SELECT * FROM user WHERE email = '$id'");
     $staff = mysqli_fetch_assoc($hasil);
+    $password = password_hash($password, PASSWORD_DEFAULT);
 
     if(isset($_POST['submit'])){
         $email = $_POST['email'];

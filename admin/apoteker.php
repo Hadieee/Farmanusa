@@ -45,7 +45,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
         <h1 class="heading">apoteker</h1>
         <?php
-        if (isset($apoteker) or isset($_POST['Cari'])) {
+        if (isset($apoteker) or isset($_POST['Cari']) or !isset($apoteker)) {
         ?>
             <div style="display: flex; flex-direction:row; justify-content:space-around; align-items:center; flex-wrap: wrap;  ">
                 <button class="btn" style="padding:11.2px; margin-top: 0; display:flex; align-items:center;" onclick="document.querySelector('.popup').style.display = 'block'">+ Tambah Apoteker</button>
@@ -106,7 +106,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <!-- apoteker section ends -->
     <div class="popup" id="popup">
-        <form class="login" action="crud-obat/tambah-obat.php" method="post">
+        <form class="login" action="crud-apoteker/tambah-apoteker.php" method="post">
             <table align="center">
                 <tr>
                     <td align="right">Email</td>

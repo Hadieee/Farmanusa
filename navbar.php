@@ -53,7 +53,7 @@ $offer_url = current_url();
                     if(isset($_SESSION['user'])){
                 ?>
                 <div class="user">
-                    <a href="logout.php"><i class="fas fa-user"></i><span><?php echo $_SESSION['user']; ?></span></a>
+                    <a href="index.php"><i class="fas fa-user"></i><span><?php echo $_SESSION['user']; ?></span></a>
                     <a class="btn" href="logout.php">Logout</a>
                 </div>
                 <?php
