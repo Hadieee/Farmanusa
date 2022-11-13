@@ -30,7 +30,7 @@
     <section class="obat" id="obat">
     <h1 class="heading"> Selamat Datang, <?php echo $_SESSION['user'] ?></h1>
     </section>
-    <section class='badan' style="margin: 0; display:flex; flex-wrap:wrap;">
+    <section class='badan' style="margin: 0; display:contents;">
         <div class="home" id="home">
             <div class="image" style="display: flex;">
                 <div class="dark" style="display: none;">
