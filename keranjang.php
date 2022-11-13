@@ -12,11 +12,49 @@
     }
     else{
         $cari = $_POST['Search'];
-        $result = mysqli_query($db, "SELECT * FROM obat_diorder LEFT JOIN orderan USING id_order
-                                     WHERE status = 'Sedang Diorder' and username = $username LIKE'%$cari%'");
+        $result = mysqli_query($db, "SELECT * FROM orderan o JOIN obat_diorder d ON (d.id_order = o.id_order)
+                                     JOIN obat b on (d.id_obat = b.id_obat) WHERE username = $username and nama_obat LIKE'%$cari%'
+                                     and status = 'Sedang Diorder'");
     }
+
     while($row = mysqli_fetch_assoc($result)){
         $order[] = $row;
+    }
+
+    if(isset($_POST['pesan'])){
+        
+        // Ambil ID Orderan
+        $query = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username' and status = 'Sedang Diorder'");
+        while($row = mysqli_fetch_assoc($query)){
+            $IDcheck[] = $row;
+        }
+    
+        $id = $IDcheck[0]['id_order'];
+
+        // Ubah jumlah obat diorder + total harga di tabel obat_diorder
+        foreach($order as $ord):
+        
+            $id_obat = $ord['id_obat'];
+            $value = $_POST[$ord['nama_obat']];
+            $hargaTotal = $value * $ord['harga_obat'];
+            $result = mysqli_query($db, "UPDATE obat_diorder SET jumlah_obat = $value,
+                                         total_harga_obat = $hargaTotal
+                                         WHERE id_order = $id AND id_obat = $id_obat");
+
+        endforeach;
+
+        $query = mysqli_query($db, "SELECT SUM(total_harga_obat) as sum FROM obat_diorder
+                                    WHERE id_order = $id");
+        
+        while($row = mysqli_fetch_assoc($query)){
+            $res[] = $row;
+        }
+
+        // Ubah Total Harga di tabel orderan
+        $Total = $res[0]['sum'];
+
+        $query = mysqli_query($db, "UPDATE orderan SET total_keseluruhan_harga = $Total
+                                    WHERE id_order = $id");
     }
 ?>
 
@@ -62,11 +100,12 @@
             <div class=totalHarga> Total Harga
                 <div class=value> 0 </div>
             </div>
+            <form action="" method="POST">
         <?php
                 foreach($order as $ord):
         ?>
             <div class="box">
-                <span class="stok" method="post"><input type="number"
+                <span class="stok"><input type="number"
                                     onkeydown="totalHarga(this, <?php echo $ord['harga_obat']; ?>, '-')"
                                     onkeyup="imposeMinMax(this), totalHarga(this, <?php echo $ord['harga_obat']; ?>, '+')"
                                     min="0" max="<?php echo $ord['stok_obat']; ?>"
@@ -82,6 +121,7 @@
                     <div class="price">Rp.<?php echo $ord['harga_obat']; ?></div>
                 </div>
             </div>
+
         <?php
                 endforeach;
             } else {
@@ -109,7 +149,8 @@
             }
         ?>
         </div>
-        <button class="btn"> Pesan Sekarang </button> 
+            <button type="submit" name="pesan" class="btn"> Pesan Sekarang </button> 
+        </form>
     </section>
 
 
