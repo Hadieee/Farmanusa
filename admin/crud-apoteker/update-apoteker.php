@@ -33,7 +33,7 @@
 
                 if(in_array($type[$jumlah], $format) === true) {
                     if($size < $max_size){
-                        unlink('../../image/'.$nama_file);
+                        unlink('../../image/'.$staff['gambar']);
                         move_uploaded_file($tmp_name, '../../image/' . $nama_file);
 
                         $tambah = "UPDATE user SET email = '$email', 
