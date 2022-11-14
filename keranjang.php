@@ -33,9 +33,9 @@
 
         // Ubah jumlah obat diorder + total harga di tabel obat_diorder
         foreach($order as $ord):
-        
+            
             $id_obat = $ord['id_obat'];
-            $value = $_POST[$ord['nama_obat']];
+            $value = ($_POST[$ord['nama_obat']] == NULL)? 0 : $_POST[$ord['nama_obat']];
             $hargaTotal = $value * $ord['harga_obat'];
             $result = mysqli_query($db, "UPDATE obat_diorder SET jumlah_obat = $value,
                                          total_harga_obat = $hargaTotal
@@ -43,6 +43,7 @@
 
         endforeach;
 
+        // Hitung Total Harga Dengan Aggregat
         $query = mysqli_query($db, "SELECT SUM(total_harga_obat) as sum FROM obat_diorder
                                     WHERE id_order = $id");
         
@@ -50,11 +51,23 @@
             $res[] = $row;
         }
 
-        // Ubah Total Harga di tabel orderan
         $Total = $res[0]['sum'];
 
-        $query = mysqli_query($db, "UPDATE orderan SET total_keseluruhan_harga = $Total
-                                    WHERE id_order = $id");
+        date_default_timezone_set("Asia/Makassar");
+        $Tanggal = date('Y-m-d');
+
+        if($Total != 0){
+            // Ubah Total Harga di tabel orderan
+            $query = mysqli_query($db, "UPDATE orderan SET total_keseluruhan_harga = $Total,
+                                        tanggal = DATE'$Tanggal',
+                                        status = 'Belum Dibayar'
+                                        WHERE id_order = $id");
+
+            // Hapus obat yang jumlah dibelinya 0
+            $query = mysqli_query($db, "DELETE FROM obat_diorder WHERE id_order = $id and jumlah_obat = 0");
+        }
+
+        header('Location: index.php');
     }
 ?>
 
