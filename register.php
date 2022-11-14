@@ -61,7 +61,7 @@
     
             // cek username telah digunakan atau belom
             $user = $db->query("SELECT * FROM user WHERE username='$username'");
-            if(mysqli_num_rows($user) > 0 || $password != $konf_password){
+            if(mysqli_num_rows($user) > 0){
                 $fail = true;
             ?>
          
