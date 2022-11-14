@@ -106,7 +106,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <!-- apoteker section ends -->
     <div class="popup" id="popup">
-        <form class="login" action="crud-apoteker/tambah-apoteker.php" method="post">
+        <form class="login" action="crud-apoteker/tambah-apoteker.php" method="post" enctype="multipart/form-data">
             <table align="center">
                 <tr>
                     <td align="right">Email</td>
@@ -135,6 +135,11 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <center>:</center>
                     </td>
                     <td align="left"><input type="password" name="password_konf" required></td>
+                </tr>
+                <tr>
+                    <td align="right">Gambar</td>
+                    <td> <center>:</center></td>
+                    <td align="left"><input type="file" name="gambar"></td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3" style="padding-top: 10px;">
