@@ -66,7 +66,7 @@
             <div class="box">
                 <span class="stok"><?php echo $obt['stok_obat']; ?></span>
                 <div class="image">
-                    <img src="../image/obat-1.jpg" alt="">
+                <img src=<?php echo "../image/".$obt['gambar'] ?> alt="">
                     <div class="icons">
                         <a href=<?php echo "crud-obat/update-obat.php?id=".$obt["id_obat"]?> class="fas fa-pencil"></a>
                         <a href=<?php echo "crud-obat/hapus-obat.php?id=".$obt["id_obat"]?> class="fas fa-trash"></a>
@@ -108,7 +108,7 @@
     </section>
 
     <div class="popup" id="popup">
-        <form class="login" action="crud-obat/tambah-obat.php" method="post">
+        <form class="login" action="crud-obat/tambah-obat.php" method="post" enctype="multipart/form-data">
             <table align="center">
                 <tr>
                     <td align="right">Nama Obat</td>
@@ -134,6 +134,11 @@
                     <td align="right">Deskripsi</td>
                     <td> <center>:</center></td>
                     <td align="left"><input type="text" name="deskripsi"></td>
+                </tr>
+                <tr>
+                    <td align="right">Gambar</td>
+                    <td> <center>:</center></td>
+                    <td align="left"><input type="file" name="gambar"></td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3" style="padding-top: 10px;">

@@ -74,7 +74,7 @@
             <div class="box">
                 <span class="stok"><?php echo $obt['stok_obat']; ?></span>
                 <div class="image">
-                    <img src="image/obat-1.jpg" alt="">
+                    <img src=<?php echo "image/".$obt['gambar'] ?> alt="">
                     <div class="icons">
                         <?php
                         $id_obat = $obt['id_obat'];

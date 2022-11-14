@@ -10,17 +10,47 @@
         $harga = $_POST['harga'];
         $stok = $_POST['stok'];
         $deskripsi  = $_POST['deskripsi'];
-        $hasil = mysqli_query($db, "UPDATE obat SET nama_obat = '$nama', 
-                                                    tipe_obat = '$jenis', 
-                                                    harga_obat = '$harga', 
-                                                    stok_obat = '$stok', 
-                                                    deskripsi = '$deskripsi' 
-                                                    WHERE id_obat = '$id'"); 
-        if($hasil){
-            echo"<script> 
-                alert('berhasil update');
-                document.location.href = '../obat.php';
-            </script>";
+        
+        $tambah = "UPDATE obat SET nama_obat = '$nama', 
+                                    tipe_obat = '$jenis', 
+                                    harga_obat = '$harga', 
+                                    stok_obat = '$stok', 
+                                    deskripsi = '$deskripsi' 
+                                    WHERE id_obat = '$id'";
+        
+        if($_FILES['gambar']['size']!=0){
+
+            $format_file = $_FILES['gambar']['name'];
+            $tmp_name = $_FILES['gambar']['tmp_name'];
+            $size = $_FILES['gambar']['size'];
+    
+            $file = urlencode($nama);
+            $type = explode('.',$format_file);
+            $jumlah = count($type)-1;
+            $nama_file = "$file.$type[$jumlah]";
+    
+            $format = array('jpg', 'png', 'jpeg');
+            $max_size = 2000000;
+    
+            if(in_array($type[$jumlah], $format) === true) {
+                if($size < $max_size){
+                    unlink('../../image/'.$obat['gambar']);
+                    move_uploaded_file($tmp_name, '../../image/' . $nama_file);
+    
+                    $tambah = "UPDATE obat SET nama_obat = '$nama', 
+                                                tipe_obat = '$jenis', 
+                                                harga_obat = '$harga', 
+                                                stok_obat = '$stok', 
+                                                deskripsi = '$deskripsi', 
+                                                gambar = '$nama_file'
+                                                WHERE id_obat = '$id'";
+                }
+            }
+        }
+        $upload = mysqli_query($db, $tambah);
+        if($upload){
+            header('Location: ../obat.php');
+            exit();
         }
     }
 ?>
@@ -42,7 +72,7 @@
     <!-- obat section starts  -->
 
     <div class="popup" id="popup" style="display: flex;">
-        <form class="login" action="" method="post">
+        <form class="login" action="" method="post" enctype="multipart/form-data">
             <table align="center">
                 <tr>
                     <td align="right">Nama Obat</td>
@@ -68,6 +98,11 @@
                     <td align="right">Deskripsi</td>
                     <td> <center>:</center></td>
                     <td align="left"><input type="text" name="deskripsi" value="<?php echo $obat['deskripsi']; ?>"></input></td>
+                </tr>
+                <tr>
+                    <td align="right">Gambar</td>
+                    <td> <center>:</center></td>
+                    <td align="left"><input type="file" name="gambar"></td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3" style="padding-top: 10px;">

@@ -31,8 +31,8 @@
     <h1 class="heading"> Selamat Datang, <?php echo $_SESSION['user'] ?></h1>
     </section>
     <section class='badan' style="margin: 0; display:contents;">
-        <div class="home" id="home">
-            <div class="image" style="display: flex;">
+        <div class="home" id="home" style="justify-content: space-evenly;">
+            <div class="image" style="display: flex; flex:none; height:230px;">
                 <div class="dark" style="display: none;">
                     <object type="image/svg+xml" data="../image/about-img.svg">
                         <img src="../image/about-img.svg" />
@@ -44,25 +44,25 @@
                     </object>
                 </div>
             </div>
-            <div class="content">
+            <div class="content" style="padding:40px; flex:none; width:500px;">
                 <h3>Kelola Data Obat</h3>
                 <a href="obat.php" class="btn"> Click Here <span class="fas fa-chevron-right"></span> </a>
             </div>
         </div>
-        <div class="home" id="home">
-            <div class="image" style="display: flex;">
-                <div class="dark" style="display: none;">
+        <div class="home" id="home" style="justify-content: space-evenly;">
+            <div class="image" style="display: flex; flex:none; height:230px;">
+                <div class="dark1" style="display: none;">
                     <object type="image/svg+xml" data="../image/about-img.svg">
                         <img src="../image/about-img.svg" />
                     </object>
                 </div>
-                <div class="light">
+                <div class="light1">
                     <object type="image/svg+xml" data="../image/book-img.svg">
                         <img src="../image/book-img.svg" />
                     </object>
                 </div>
             </div>
-            <div class="content">
+            <div class="content" style="padding:40px; flex:none; width:500px;">
                 <h3>Kelola Data Apoteker</h3>
                 <a href="apoteker.php" class="btn"> Click Here <span class="fas fa-chevron-right"></span> </a>
             </div>

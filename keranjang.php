@@ -40,6 +40,7 @@
             $result = mysqli_query($db, "UPDATE obat_diorder SET jumlah_obat = $value,
                                          total_harga_obat = $hargaTotal
                                          WHERE id_order = $id AND id_obat = $id_obat");
+            mysqli_query($db, "UPDATE obat SET stok_obat = stok_obat - $value WHERE id_obat = $id_obat");
 
         endforeach;
 
@@ -66,6 +67,7 @@
             // Hapus obat yang jumlah dibelinya 0
             $query = mysqli_query($db, "DELETE FROM obat_diorder WHERE id_order = $id and jumlah_obat = 0");
         }
+            
 
         header('Location: index.php');
     }
@@ -105,7 +107,7 @@
         <?php
             }
         ?>
-        
+        <form action="" method="POST">   
         <div class="box-container">
         <?php   
             if(isset($order)){
@@ -113,7 +115,6 @@
             <div class=totalHarga> Total Harga
                 <div class=value> 0 </div>
             </div>
-            <form action="" method="POST">
         <?php
                 foreach($order as $ord):
         ?>
@@ -126,19 +127,25 @@
                                         maxlength="3";
                                         value="0" name='<?php echo $ord['nama_obat']?>'>
                                     </span>
-                
                     <div class="image">
-                        <img src="image/obat-1.jpg" alt="">
+                        <img src=<?php echo "image/".$ord['gambar'] ?> alt="">
+                        <div class="icons" style="width: 100%;">
+                            <a style="width: 100%;" href=<?php echo "crud-obat/hapus-obat.php?id=".$ord["id_obat"]?> class="fas fa-trash"></a>
+                        </div>
                     </div>
                     <div class="content">
                         <h3><?php echo $ord['nama_obat']; ?></h3>
                         <div class="price">Rp.<?php echo $ord['harga_obat']; ?></div>
                     </div>
                 </div>
-
             <?php
                     endforeach;
-                } else {
+            ?>
+            </div>
+            <button type="submit" name="anti_enter" onclick="return warning()" style="display:hidden">
+            <button style="margin-top: 5rem" type="submit" name="pesan" onclick="return beli()" class="btn"> Pesan Sekarang </button>
+            <?php
+                } else{
                 if(!isset($_POST['Cari'])){
             ?>
             <div class="kosong">
@@ -163,8 +170,6 @@
                 }
             ?>
             </div>
-            <button type="submit" name="anti_enter" onclick="return warning()" style="display:hidden">
-            <button type="submit" name="pesan" onclick="return beli()" class="btn"> Pesan Sekarang </button> 
         </form>
     </section>
 

@@ -45,6 +45,12 @@ $offer_url = current_url();
                                 <a href="keranjang.php"><i class="fas fa-shopping-cart"></i><span>Keranjang</span></a>
                             </div>';
                     }
+                    if($offer_url != 'riwayat'){
+                        echo'
+                            <div>
+                                <a href="riwayat.php"><i class="fas fa-history"></i><span>Riwayat Pesanan</span></a>
+                            </div>';
+                    }
                 ?>
                 
             </div>
