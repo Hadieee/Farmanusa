@@ -104,52 +104,53 @@
         <?php
                 foreach($order as $ord):
         ?>
-            <div class="box">
-                <span class="stok"><input type="number"
-                                    onkeydown="totalHarga(this, <?php echo $ord['harga_obat']; ?>, '-')"
-                                    onkeyup="imposeMinMax(this), totalHarga(this, <?php echo $ord['harga_obat']; ?>, '+')"
-                                    min="0" max="<?php echo $ord['stok_obat']; ?>"
-                                    maxlength="3";
-                                    value="0" name='<?php echo $ord['nama_obat']?>'>
-                                </span>
-               
-                <div class="image">
-                    <img src="image/obat-1.jpg" alt="">
+                <div class="box">
+                    <span class="stok"><input type="number"
+                                        onkeydown="totalHarga(this, <?php echo $ord['harga_obat']; ?>, '-')"
+                                        onkeyup="imposeMinMax(this), totalHarga(this, <?php echo $ord['harga_obat']; ?>, '+')"
+                                        min="0" max="<?php echo $ord['stok_obat']; ?>"
+                                        maxlength="3";
+                                        value="0" name='<?php echo $ord['nama_obat']?>'>
+                                    </span>
+                
+                    <div class="image">
+                        <img src="image/obat-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3><?php echo $ord['nama_obat']; ?></h3>
+                        <div class="price">Rp.<?php echo $ord['harga_obat']; ?></div>
+                    </div>
                 </div>
-                <div class="content">
-                    <h3><?php echo $ord['nama_obat']; ?></h3>
-                    <div class="price">Rp.<?php echo $ord['harga_obat']; ?></div>
-                </div>
-            </div>
 
-        <?php
-                endforeach;
-            } else {
-            if(!isset($_POST['Cari'])){
-        ?>
-        <div class="kosong">
-            <h3> Keranjang Anda Kosong </h3>
-            <p>
-                Silakan pilih obat
-                di menu obat
-            </p> 
-        </div>
-        <?php
-            } else {
-        ?>
-        <div class="kosong">
-            <h3> Obat belum ada</h3>
-            <p>
-                Obat yang Anda cari
-                tidak ada di keranjang Anda
-            </p> 
-        </div>
-        <?php
-            }
-            }
-        ?>
-        </div>
-            <button type="submit" name="pesan" class="btn"> Pesan Sekarang </button> 
+            <?php
+                    endforeach;
+                } else {
+                if(!isset($_POST['Cari'])){
+            ?>
+            <div class="kosong">
+                <h3> Keranjang Anda Kosong </h3>
+                <p>
+                    Silakan pilih obat
+                    di menu obat
+                </p> 
+            </div>
+            <?php
+                } else {
+            ?>
+            <div class="kosong">
+                <h3> Obat belum ada</h3>
+                <p>
+                    Obat yang Anda cari
+                    tidak ada di keranjang Anda
+                </p> 
+            </div>
+            <?php
+                }
+                }
+            ?>
+            </div>
+            <button type="submit" name="anti_enter" onclick="return warning()" style="display:hidden">
+            <button type="submit" name="pesan" onclick="return beli()" class="btn"> Pesan Sekarang </button> 
         </form>
     </section>
 

@@ -718,14 +718,14 @@ section {
     box-shadow: var(--box-shadow);
 }
 
-.keranjang .box-container{
+.keranjang .box-container form{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap:1.5rem;
 }
 
-.keranjang .box-container .box{
+.keranjang .box-container form .box{
     max-width: 300px;
     flex:1 1 30rem;
     box-shadow: var(--box-shadow);
@@ -734,7 +734,7 @@ section {
     position: relative;    
 }
 
-.keranjang .box-container .box input{
+.keranjang .box-container form .box input{
     position: absolute;
     top:1rem; left:1rem;
     padding:.7rem 1rem;
@@ -748,7 +748,7 @@ section {
 
 
 
-.keranjang .box-container .box .image{
+.keranjang .box-container form .box .image{
     position: relative;
     text-align: center;
     padding: 2rem 2rem 0 2rem;
@@ -756,28 +756,28 @@ section {
     height: 25rem;
 }
 
-.keranjang .box-container .box .image img{
+.keranjang .box-container form .box .image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.keranjang .box-container .box:hover .image img{
+.keranjang .box-container form .box:hover .image img{
     transform: scale(1.1);
 }
 
-.keranjang .box-container .box .image .icons{
+.keranjang .box-container form .box .image .icons{
     position: absolute;
     bottom:-7rem; left:0; right:0;
     display: flex;
 }
 
-.keranjang .box-container .box:hover .image .icons{
+.keranjang .box-container form .box:hover .image .icons{
     bottom:0;
 }
 
-.keranjang .box-container .box .image .icons a{
+.keranjang .box-container form .box .image .icons a{
     height: 5rem;
     line-height: 5rem;
     font-size: 2rem;
@@ -792,28 +792,28 @@ section {
     width:100%;
 }
 
-.keranjang .box-container .box .image .icons a:hover{
+.keranjang .box-container form .box .image .icons a:hover{
     background:var(--dark-color);
 }
 
-.keranjang .box-container .box .content{
+.keranjang .box-container form .box .content{
     padding:2rem;
     text-align: center;
 }
 
-.keranjang .box-container .box .content h3{
+.keranjang .box-container form .box .content h3{
     font-size: 2.5rem;
     color:var(--dark-color);
 }
 
-.keranjang .box-container .box .content .price{
+.keranjang .box-container form .box .content .price{
     font-size: 2.5rem;
     color:var(--pink);
     font-weight: bolder;
     padding-top: 1rem;
 }
 
-.keranjang .box-container .box .content .price span{
+.keranjang .box-container form .box .content .price span{
     font-size: 1.5rem;
     color:var(--pink);
     font-weight: lighter;

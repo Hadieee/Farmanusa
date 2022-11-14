@@ -73,6 +73,18 @@ function cart_add(){
     return alert(" Obat berhasil ditambahkan ke Keranjang.");
 }
 
+function beli(){
+    if (!confirm("Selesai memilih dan lakukan pemesanan?")){
+            return false;}
+    
+    this.form.submit();
+}
+
+function warning(){
+    alert("mohon gunakan tombol 'Pesan Sekarang'");
+    return false;
+}
+
 function loggingPop(){
     if(document.getElementById('popup').style.display != 'flex'){
         document.getElementById('popup2').style.display = 'none';
