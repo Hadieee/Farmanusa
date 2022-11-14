@@ -118,7 +118,8 @@
                 foreach($order as $ord):
         ?>
                 <div class="box">
-                    <span class="stok"><input type="number"
+                    <span class="stok"><input type="text" patern="[0-9]"
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                         onkeydown="totalHarga(this, <?php echo $ord['harga_obat']; ?>, '-')"
                                         onkeyup="imposeMinMax(this), totalHarga(this, <?php echo $ord['harga_obat']; ?>, '+')"
                                         min="0" max="<?php echo $ord['stok_obat']; ?>"
