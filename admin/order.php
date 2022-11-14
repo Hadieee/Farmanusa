@@ -86,8 +86,6 @@
                     endforeach;
             ?>
             </div>
-            <button type="submit" name="anti_enter" onclick="return warning()" style="display:hidden">
-            <button style="margin-top: 5rem" type="submit" name="pesan" onclick="return beli()" class="btn"> Pesan Sekarang </button>
             <?php
                 } else{
                 if(!isset($_POST['Cari'])){
@@ -103,10 +101,10 @@
                 } else {
             ?>
             <div class="kosong">
-                <h3> Obat belum ada</h3>
+                <h3> Data Order Tidak Ditemukan </h3>
                 <p>
-                    Obat yang Anda cari
-                    tidak ada di keranjang Anda
+                    Tunggu User Untuk 
+                    Membuat Orderan
                 </p> 
             </div>
             <?php
