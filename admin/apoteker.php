@@ -64,7 +64,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             ?>
                     <div class="box">
                         <div class="image">
-                            <img src="../image/blog-2.jpg" alt="">
+                        <img src=<?php echo "../image/".$staff['gambar'] ?> alt="">
                             <div class="icons">
                                 <a href=<?php echo "crud-apoteker/update-apoteker.php?id=" . $staff["email"] ?> class="fas fa-pencil"></a>
                                 <a href=<?php echo "crud-apoteker/hapus-apoteker.php?id=" . $staff["email"] ?> class="fas fa-trash"></a>

@@ -4,6 +4,13 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
     $konf_password = $_POST['password_konf'];
+    $format_file = $_FILES['gambar']['name'];
+    $tmp_name = $_FILES['gambar']['tmp_name'];
+    $size = $_FILES['gambar']['size'];
+    $file = urlencode($nama);
+    $type = explode('.',$format_file);
+    $jumlah = count($type)-1;
+    $nama_file = "$file.$type[$jumlah]";
     $fail = false;
     
     // cek username telah digunakan atau belom

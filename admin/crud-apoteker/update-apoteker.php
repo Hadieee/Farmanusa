@@ -15,12 +15,47 @@
                                                     password = '$password',
                                                     tipe_akun = 'apoteker'  
                                                     WHERE email = '$id'"); 
-        if($hasil){
-            echo"<script> 
-                alert('berhasil update');
-                document.location.href = '../apoteker.php';
-            </script>";
+
+if($_FILES['gambar']['size']!=0){
+
+    $format_file = $_FILES['gambar']['name'];
+    $tmp_name = $_FILES['gambar']['tmp_name'];
+    $size = $_FILES['gambar']['size'];
+
+    $file = urlencode($nama);
+    $type = explode('.',$format_file);
+    $jumlah = count($type)-1;
+    $nama_file = "$file.$type[$jumlah]";
+
+    $format = array('jpg', 'png', 'jpeg');
+    $max_size = 2000000;
+
+    if(in_array($type[$jumlah], $format) === true) {
+        if($size < $max_size){
+            unlink('../../image/'.$staff['gambar']);
+            move_uploaded_file($tmp_name, '../../image/' . $nama_file);
+
+            $tambah = "UPDATE user SET email = '$email', 
+                                username = '$username', 
+                                password = '$password',
+                                tipe_akun = 'apoteker',
+                                gambar = '$gambar_file' 
+                                WHERE email = '$id'";
         }
+    }
+}
+$upload = mysqli_query($db, $tambah);
+if($upload){
+    header('Location: ../obat.php');
+    exit();
+}
+
+        // if($hasil){
+        //     echo"<script> 
+        //         alert('berhasil update');
+        //         document.location.href = '../apoteker.php';
+        //     </script>";
+        // }
     }
 ?>
 
@@ -41,7 +76,7 @@
     <!-- obat section starts  -->
 
     <div class="popup" id="popup" style="display: flex;">
-        <form class="login" action="" method="post">
+        <form class="login" action="" method="post" enctype="multipart/form-data">
             <table align="center">
                 <tr>
                     <td align="right">Email</td>
@@ -63,6 +98,11 @@
                     <td> <center>:</center></td>
                     <td align="left"><input type="password" name="password_konf" required></input></td>
                 </tr>   
+                <tr>
+                    <td align="right">Gambar</td>
+                    <td> <center>:</center></td>
+                    <td align="left"><input type="file" name="gambar"></td>
+                </tr>
                 <tr>
                     <td align="center" colspan="3" style="padding-top: 10px;">
                             <button type="submit" name="submit" class="btn"> Perbarui </button>
