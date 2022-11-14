@@ -86,7 +86,7 @@
                         }
 
                         if (isset($rowCheck)){?>
-                            <a href="#" class="cart-btn">Sudah di keranjang</a>
+                            <a href="keranjang.php" class="cart-btn">Sudah di keranjang</a>
                         <?php
                             unset($rowCheck);
                         } else{
