@@ -755,6 +755,7 @@ section {
 
 
 .keranjang .box-container .box .image{
+    width: 25rem;
     position: relative;
     text-align: center;
     padding: 2rem 2rem 0 2rem;
