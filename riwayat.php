@@ -55,7 +55,7 @@
             if(isset($obat) or isset($_POST['Cari'])){
         ?>
             <form id="searchObat" action="" method="POST">
-                <input type="text" value="" name="Search" placeholder="Cari Nama Obat"  autocomplete="on">
+                <input type="text" value="" name="Search" placeholder="Cari Data Riwayat"  autocomplete="on">
                 <button class="btn" type="submit" name="Cari"><i class="fas fa-search"></i></button>
             </form>
         <?php
