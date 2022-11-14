@@ -7,23 +7,17 @@
     }else{
         $username = $_SESSION['user'];
         $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username' and status = 'Sudah Dibayar'");
-        
+
+        if(!isset($_POST['Cari'])){
+            $cari = $_POST['Search'];
+            $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username' and status = 'Sudah Dibayar' and id_order LIKE '%$cari%'");
+        }
+
         if(mysqli_num_rows($check) > 0){
             while($row = mysqli_fetch_assoc($check)){
                 $riwayat[] = $row;
             }
         }
-    }
-    
-    if(!isset($_POST['Cari'])){
-        $result = mysqli_query($db, "SELECT * FROM obat WHERE stok_obat > 0");
-    }
-    else{
-        $cari = $_POST['Search'];
-        $result = mysqli_query($db, "SELECT * FROM obat WHERE nama_obat LIKE'%$cari%' AND stok_obat > 0");
-    }
-    while($row = mysqli_fetch_assoc($result)){
-        $obat[] = $row;
     }
 ?>
 
