@@ -1,5 +1,10 @@
 <?php
-session_start();
+    session_start();
+    if(isset($_SESSION['tipe_akun'])){
+        if($_SESSION['tipe_akun'] == 'admin' || $_SESSION['tipe_akun'] == 'apoteker'){
+            header('Location: admin/index.php');
+        }
+    }
 ?>
 
 <!DOCTYPE html>

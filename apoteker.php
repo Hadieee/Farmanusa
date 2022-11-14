@@ -55,7 +55,7 @@
             ?>
                 <div class="box">
                     <div class="image">
-                        <img src="image/blog-2.jpg" alt="">
+                        <img src=<?php echo "image/".$staff['gambar']; ?> alt="">
                     </div>
                     <h1><?php echo $staff['username'] ?></h1>
                     <span>expert fharmachist</span>
