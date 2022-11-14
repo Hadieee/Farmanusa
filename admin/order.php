@@ -93,10 +93,10 @@
                 if(!isset($_POST['Cari'])){
             ?>
             <div class="kosong">
-                <h3> Keranjang Anda Kosong </h3>
+                <h3> Daftar Order Masih Kosong </h3>
                 <p>
-                    Silakan pilih obat
-                    di menu obat
+                    Tunggu User Untuk 
+                    Membuat Orderan
                 </p> 
             </div>
             <?php
