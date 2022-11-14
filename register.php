@@ -43,7 +43,7 @@
             <tr>
                 <td align="center" colspan="2" id="registerButtons">
                         <button type="submit" name="register" class="inLoginButton"><a> Daftar </a></button>
-                        <button class="inLoginButton"><a href=""> Batalkan </a> </button>
+                        <button class="inLoginButton" onclick="document.getElementById('popup2').style.display = 'none';"><a> Batalkan </a> </button>
                 </td>
             </tr>
         </table>
