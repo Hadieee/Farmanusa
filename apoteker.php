@@ -54,7 +54,9 @@
                 foreach ($apoteker as $staff):
             ?>
                 <div class="box">
-                    <img src="image/blog-2.jpg" alt="">
+                    <div class="image">
+                        <img src="image/blog-2.jpg" alt="">
+                    </div>
                     <h1><?php echo $staff['username'] ?></h1>
                     <span>expert fharmachist</span>
                     <div class="share">

@@ -48,7 +48,7 @@ $offer_url = current_url();
                     if($offer_url != 'riwayat'){
                         echo'
                             <div>
-                                <a href="riwayat.php"><i class="fas fa-history"></i><span>Riwayat Pesanan</span></a>
+                                <a href="riwayat.php"><i class="fas fa-history"></i><span>Riwayat Pesanan</></a>
                             </div>';
                     }
                 ?>

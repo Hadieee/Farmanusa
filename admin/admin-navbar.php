@@ -39,6 +39,12 @@ $offer_url = current_url();
                                     <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
                                 </div>';
                         }
+                        if($offer_url != 'order'){
+                            echo'
+                                <div>
+                                    <a href="order.php"><i class="fas fa-user-md"></i><span>Data Orderan</span></a>
+                                </div>';
+                        }
                     }
                 ?>
                 

@@ -6,14 +6,14 @@
         echo"<script>alert('Login Dulu Ya Dek');document.location.href = 'index.php';</script>";
     }else{
         $username = $_SESSION['user'];
-        $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username' and status = 'Sedang Diorder'");
+        $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username' and status = 'Sudah Dibayar'");
 
         while($row = mysqli_fetch_assoc($check)){
             $checkSlot[] = $row;
         }
 
         if(!isset($checkSlot)){
-            $query = "INSERT INTO orderan VALUES (default, '$username', ".date("Y-m-d").", 0, 'Sedang Diorder')" ;
+            $query = "INSERT INTO orderan VALUES (default, '$username', ".date("Y-m-d").", 0, 'Sudah Dibayar')" ;
             $result = $db->query($query);
         }
     }
@@ -80,14 +80,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($riwayat as $data) : ?>
+                    <?php if(isset($riwayat)){foreach ($riwayat as $data): ?>
                         <tr>
-                            <td><?=  ?></td>
-                            <td><?=  ?></td>
-                            <td><?=  ?></td>
-                            <td><?=  ?></td>
-                            <td><?=  ?></td>
-                            <td><?=  ?></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -99,7 +99,7 @@
         <div class="kosong">
             <h3>Mohon Maaf</h3>
             <p>
-                Belum Ada Obat yang 
+                Belum Ada Riwayat Pemesanan yang 
                 tersedia di Farmanusa
             </p> 
         </div>
@@ -115,7 +115,6 @@
             </p> 
         </div>
         <?php
-            }
             }
         ?>
         </div>

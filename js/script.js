@@ -99,6 +99,12 @@ function beli(){
     this.form.submit();
 }
 
+function konfirmasi(){
+    if (!confirm("Konfirmasi Pembayaran Obat?")){
+            return false;}
+    this.form.submit();
+}
+
 function warning(){
     alert("mohon gunakan tombol 'Pesan Sekarang'");
     return false;

@@ -643,7 +643,6 @@ section {
 .apoteker .box-container .box .image{
     position: relative;
     text-align: center;
-    padding: 2rem 2rem 0 2rem;
     overflow:hidden;
     height: 25rem;
 }
@@ -675,11 +674,16 @@ section {
     background:var(--dark-color);
 }
 
-.apoteker .box-container .box img{
-    height: 17rem;
+.apoteker .box-container .box .image{
+    display: flex;
+    justify-content: space-around;
     border:var(--border);
     border-radius: .5rem;   
-    margin-bottom: 1rem;
+}
+
+.apoteker .box-container .box img{
+    height: 100%;
+    object-fit: cover;
 }
 
 .apoteker .box-container .box h1{
@@ -803,6 +807,11 @@ section {
 
 .keranjang .box-container .box .content h3{
     font-size: 2.5rem;
+    color:var(--dark-color);
+}
+
+.keranjang .box-container .box .content h4{
+    font-size: 1.5rem;
     color:var(--dark-color);
 }
 
@@ -982,8 +991,26 @@ section {
     color:var(--red);
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 580px) {
+    .heading{
+        margin-top: 100px;
+    }
     .kepala.active .dark_mode {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    #searchObat input{
+        width: 100%;
+    }
+    #searchObat button{
+        width: 100%;
+    }
+    .heading{
+        font-size: 30px;
+    }
+    .apoteker .box-container .box{
+        width: 100%;
     }
 }

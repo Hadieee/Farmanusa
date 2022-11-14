@@ -67,8 +67,6 @@
             // Hapus obat yang jumlah dibelinya 0
             $query = mysqli_query($db, "DELETE FROM obat_diorder WHERE id_order = $id and jumlah_obat = 0");
         }
-            
-
         header('Location: index.php');
     }
 ?>
@@ -125,7 +123,7 @@
                                         onkeyup="imposeMinMax(this), totalHarga(this, <?php echo $ord['harga_obat']; ?>, '+')"
                                         min="0" max="<?php echo $ord['stok_obat']; ?>"
                                         maxlength="3";
-                                        value="0" name='<?php echo $ord['nama_obat']?>'>
+                                        value="0" name='<?php echo $ord['nama_obat']?>' style="width: 50%;">
                                     </span>
                     <div class="image">
                         <img src=<?php echo "image/".$ord['gambar'] ?> alt="">
