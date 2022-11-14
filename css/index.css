@@ -1014,3 +1014,67 @@ section {
         width: 100%;
     }
 }
+
+#tabel{
+    width: 100%;
+}
+
+.products-area-wrapper {
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 0 4px;
+  }
+  
+  .tableView .products-header {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0;
+  }
+  .tableView .products-row {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    background-color: var(--red);
+  }
+
+  .tableView .products-row:hover {
+    box-shadow: var(--box-shadow);
+    background-color: var(--dark-color);
+  }
+
+  .tableView .sel {
+    text-align: center;
+    flex: 1;
+    padding: 8px 20px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 880px) {
+    .tableView .sel.id{
+        flex: 0.3;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .tableView .sel.harga{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .tableView .sel.stock {
+      display: none;
+    }
+    .tableView .sel.price {
+      flex: 0.4;
+    }
+  }

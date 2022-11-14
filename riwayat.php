@@ -7,14 +7,11 @@
     }else{
         $username = $_SESSION['user'];
         $check = mysqli_query($db, "SELECT * FROM orderan WHERE username = '$username' and status = 'Sudah Dibayar'");
-
-        while($row = mysqli_fetch_assoc($check)){
-            $checkSlot[] = $row;
-        }
-
-        if(!isset($checkSlot)){
-            $query = "INSERT INTO orderan VALUES (default, '$username', ".date("Y-m-d").", 0, 'Sudah Dibayar')" ;
-            $result = $db->query($query);
+        
+        if(mysqli_num_rows($check) > 0){
+            while($row = mysqli_fetch_assoc($check)){
+                $riwayat[] = $row;
+            }
         }
     }
     
@@ -28,8 +25,6 @@
     while($row = mysqli_fetch_assoc($result)){
         $obat[] = $row;
     }
-
-    
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +50,7 @@
 
     <section class="obat" id="obat">
 
-        <h1 class="heading"> obat </h1>
+        <h1 class="heading"> Riwayat Pesanan </h1>
         <?php 
             if(isset($obat) or isset($_POST['Cari'])){
         ?>
@@ -68,32 +63,26 @@
         ?>
     <div class="box-container">
         <div id=tabel>
-            <table>
-                <thead>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if(isset($riwayat)){foreach ($riwayat as $data): ?>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
-    </div> else {
+            <div class="products-area-wrapper tableView">
+                <div class="products-header">
+                    <div class="sel id">ID Order</div>
+                    <div class="sel tanggal">Tanggal</div>
+                    <div class="sel harga">Total Harga</div>
+                    <div class="sel status">Status</div>
+                </div>
+                <?php if(isset($riwayat)){foreach ($riwayat as $data): ?>
+                <div class="products-row">
+                    <div class="sel id">
+                        <span><?=$data['id_order']?></span>
+                    </div>
+                    <div class="sel tanggal"><span class="cell-label"></span><?=$data['tanggal']?></div>
+                    <div class="sel harga"><span class="cell-label"></span><?=$data['total_keseluruhan_harga']?></div>
+                    <div class="sel status"><span class="cell-label"></span><?=$data['status']?></div>
+                    </div>
+                <?php endforeach;  ?> 
+            </div>
+        </div> 
+        <?php } else {
             if(!isset($_POST['Cari'])){
         ?>
         <div class="kosong">
@@ -116,6 +105,7 @@
         </div>
         <?php
             }
+        }
         ?>
         </div>
     </section>

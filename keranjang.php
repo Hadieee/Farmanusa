@@ -128,7 +128,7 @@
                     <div class="image">
                         <img src=<?php echo "image/".$ord['gambar'] ?> alt="">
                         <div class="icons" style="width: 100%;">
-                            <a style="width: 100%;" href=<?php echo "crud-obat/hapus-obat.php?id=".$ord["id_obat"]?> class="fas fa-trash"></a>
+                            <a style="width: 100%;" href=<?php echo "hapus_keranjang.php?id_obat=".$ord["id_obat"]."&id_order=".$ord["id_order"]?> class="fas fa-trash"></a>
                         </div>
                     </div>
                     <div class="content">
