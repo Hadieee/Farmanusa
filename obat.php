@@ -78,7 +78,7 @@
                     <div class="icons">
                         <?php
                         $id_obat = $obt['id_obat'];
-                        $ObatDiKeranjang = "SELECT * FROM orderan JOIN obat_diorder where username = '$username'
+                        $ObatDiKeranjang = "SELECT * FROM orderan JOIN obat_diorder USING (id_order) where username = '$username'
                                             and status = 'Sedang Diorder' and id_obat = $id_obat";
                         $qA = $db->query($ObatDiKeranjang);
                         while($rowA = mysqli_fetch_assoc($qA)){
