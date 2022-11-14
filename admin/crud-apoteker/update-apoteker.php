@@ -10,45 +10,48 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $password_konf = $_POST['password_konf'];
-        $hasil = mysqli_query($db, "UPDATE user SET email = '$email', 
-                                                    username = '$username', 
-                                                    password = '$password',
-                                                    tipe_akun = 'apoteker'  
-                                                    WHERE email = '$id'"); 
+        if($password == $password_konf){
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $tambah = mysqli_query($db, "UPDATE user SET email = '$email', 
+                                                        username = '$username', 
+                                                        password = '$hash',
+                                                        tipe_akun = 'apoteker'  
+                                                        WHERE email = '$id'"); 
+            if($_FILES['gambar']['size']!=0){
 
-if($_FILES['gambar']['size']!=0){
+                $format_file = $_FILES['gambar']['name'];
+                $tmp_name = $_FILES['gambar']['tmp_name'];
+                $size = $_FILES['gambar']['size'];
 
-    $format_file = $_FILES['gambar']['name'];
-    $tmp_name = $_FILES['gambar']['tmp_name'];
-    $size = $_FILES['gambar']['size'];
+                $file = $email;
+                $type = explode('.',$format_file);
+                $jumlah = count($type)-1;
+                $nama_file = "$file.$type[$jumlah]";
 
-    $file = urlencode($nama);
-    $type = explode('.',$format_file);
-    $jumlah = count($type)-1;
-    $nama_file = "$file.$type[$jumlah]";
+                $format = array('jpg', 'png', 'jpeg');
+                $max_size = 2000000;
 
-    $format = array('jpg', 'png', 'jpeg');
-    $max_size = 2000000;
+                if(in_array($type[$jumlah], $format) === true) {
+                    if($size < $max_size){
+                        unlink('../../image/'.$nama_file);
+                        move_uploaded_file($tmp_name, '../../image/' . $nama_file);
 
-    if(in_array($type[$jumlah], $format) === true) {
-        if($size < $max_size){
-            unlink('../../image/'.$staff['gambar']);
-            move_uploaded_file($tmp_name, '../../image/' . $nama_file);
-
-            $tambah = "UPDATE user SET email = '$email', 
-                                username = '$username', 
-                                password = '$password',
-                                tipe_akun = 'apoteker',
-                                gambar = '$gambar_file' 
-                                WHERE email = '$id'";
+                        $tambah = "UPDATE user SET email = '$email', 
+                                            username = '$username', 
+                                            password = '$hash',
+                                            tipe_akun = 'apoteker',
+                                            gambar = '$nama_file' 
+                                            WHERE email = '$id'";
+                    }
+                }
+            }
+            $upload = mysqli_query($db, $tambah);
+            if($upload){
+                header('Location: ../apoteker.php');
+                exit();
+            }
         }
-    }
-}
-$upload = mysqli_query($db, $tambah);
-if($upload){
-    header('Location: ../obat.php');
-    exit();
-}
+
 
         // if($hasil){
         //     echo"<script> 

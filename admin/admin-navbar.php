@@ -32,6 +32,12 @@ $offer_url = current_url();
                         <a href="obat.php"><i class="fa-solid fa-pills"></i><span>Data Obat<span></a>
                         </div>';
                     }
+                    if($offer_url != 'order'){
+                        echo'
+                            <div>
+                                <a href="order.php"><i class="fas fa-user-md"></i><span>Data Orderan</span></a>
+                            </div>';
+                    }
                     if($_SESSION['tipe_akun'] == 'admin'){
                         if($offer_url != 'apoteker'){
                             echo'
@@ -39,12 +45,7 @@ $offer_url = current_url();
                                     <a href="apoteker.php"><i class="fas fa-user-md"></i><span>Data Apoteker</span></a>
                                 </div>';
                         }
-                        if($offer_url != 'order'){
-                            echo'
-                                <div>
-                                    <a href="order.php"><i class="fas fa-user-md"></i><span>Data Orderan</span></a>
-                                </div>';
-                        }
+                        
                     }
                 ?>
                 

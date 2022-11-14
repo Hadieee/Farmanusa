@@ -641,6 +641,7 @@ section {
 }
 
 .apoteker .box-container .box .image{
+    height: 30rem;
     position: relative;
     text-align: center;
     overflow:hidden;
@@ -683,6 +684,7 @@ section {
 
 .apoteker .box-container .box img{
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 

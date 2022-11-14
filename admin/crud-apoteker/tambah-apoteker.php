@@ -7,7 +7,7 @@
     $format_file = $_FILES['gambar']['name'];
     $tmp_name = $_FILES['gambar']['tmp_name'];
     $size = $_FILES['gambar']['size'];
-    $file = urlencode($nama);
+    $file = $email;
     $type = explode('.',$format_file);
     $jumlah = count($type)-1;
     $nama_file = "$file.$type[$jumlah]";
@@ -51,7 +51,7 @@
     if($fail == false){
         // konfirmasi password uda bener atau belom
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $query = "INSERT INTO user VALUES ('$email', '$username', '$password', 'apoteker')";
+        $query = "INSERT INTO user VALUES ('$email', '$username', '$password', 'apoteker', '$nama_file')";
         $result = $db->query($query);
         ?>
         <script type="text/javascript">
