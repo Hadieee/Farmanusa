@@ -7,10 +7,11 @@
     $format_file = $_FILES['gambar']['name'];
     $tmp_name = $_FILES['gambar']['tmp_name'];
     $size = $_FILES['gambar']['size'];
-    $file = $email;
+    
+    $file = explode('.',$email);
     $type = explode('.',$format_file);
     $jumlah = count($type)-1;
-    $nama_file = "$file.$type[$jumlah]";
+    $nama_file = "$file[0].$type[$jumlah]";
     $fail = false;
     
     // cek username telah digunakan atau belom

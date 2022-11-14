@@ -23,10 +23,10 @@
                 $tmp_name = $_FILES['gambar']['tmp_name'];
                 $size = $_FILES['gambar']['size'];
 
-                $file = $email;
+                $file = explode('.',$email);
                 $type = explode('.',$format_file);
                 $jumlah = count($type)-1;
-                $nama_file = "$file.$type[$jumlah]";
+                $nama_file = "$file[1].$type[$jumlah]";
 
                 $format = array('jpg', 'png', 'jpeg');
                 $max_size = 2000000;
