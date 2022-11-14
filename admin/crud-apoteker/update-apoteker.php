@@ -26,7 +26,7 @@
                 $file = explode('.',$email);
                 $type = explode('.',$format_file);
                 $jumlah = count($type)-1;
-                $nama_file = "$file[1].$type[$jumlah]";
+                $nama_file = "$file[0].$type[$jumlah]";
 
                 $format = array('jpg', 'png', 'jpeg');
                 $max_size = 2000000;
