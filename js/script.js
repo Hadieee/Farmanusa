@@ -147,14 +147,3 @@ function totalHarga(el, harga, jalur){
 
     change[0].innerHTML = harga_total;
 }
-
-function keyPressed(e)
-{
-     var key;      
-     if(window.event)
-          key = window.event.keyCode; //IE
-     else
-          key = e.which; //firefox      
-
-     return (key != 13);
-}
