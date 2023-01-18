@@ -52,6 +52,7 @@
     if($fail == false){
         // konfirmasi password uda bener atau belom
         $password = password_hash($password, PASSWORD_DEFAULT);
+        move_uploaded_file($tmp_name, '../../image/' . $nama_file);
         $query = "INSERT INTO user VALUES ('$email', '$username', '$password', 'apoteker', '$nama_file')";
         $result = $db->query($query);
         ?>
